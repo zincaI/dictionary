@@ -24,5 +24,12 @@ namespace dictionary
         {
             InitializeComponent();
         }
+
+        private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string username = textBoxUsername.Text;
+            string password = passwordBoxPassword.Password;
+            // Verifică username-ul și parola, autentifică utilizatorul, etc.
+        }
     }
 }
