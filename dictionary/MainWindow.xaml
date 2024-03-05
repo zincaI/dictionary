@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Modes" Height="450" Width="800" Background="LightGray">
     <Grid>
-        <Button  Content="Administrative mode" HorizontalAlignment="Center" VerticalAlignment="Top" Width="346" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="0,94,0,0" Click="login_Click" />
+        <Button  Content="Administrative mode" HorizontalAlignment="Center" VerticalAlignment="Top" Width="346" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="0,94,0,0" Click="Login_Click" />
         <Button  Content="Search words" HorizontalAlignment="Center" VerticalAlignment="Top" Width="346" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="0,190,0,0"/>
         <Button  Content="Entertaiment" HorizontalAlignment="Center" VerticalAlignment="Top" Width="346" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="0,274,0,0"/>
     </Grid>

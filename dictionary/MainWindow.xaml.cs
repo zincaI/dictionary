@@ -25,7 +25,7 @@ namespace dictionary
             InitializeComponent();
         }
 
-        private void login_Click(object sender, EventArgs e)
+        private void Login_Click(object sender, EventArgs e)
         {
             // Instantiate SecondForm
             Login login = new Login();
@@ -38,11 +38,11 @@ namespace dictionary
     //enterAdmin_Click
     public partial class Login : Window
     {
-        private void CloseWindow()
-        {
-            this.Close();
-        }
-        private void enterAdmin_Click(object sender, RoutedEventArgs e)
+        //private void CloseWindow()
+        //{
+        //    this.Close();
+        //}
+        private void EnterAdmin_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -76,8 +76,26 @@ namespace dictionary
 
     }
 
-    public partial class ManageWords : Window
-    {
+public partial class ManageWords : Window
+{
+    //public ManageWords()
+    //{
+    //    InitializeComponent();
+    //}
 
+    private void AddWord_Click(object sender, RoutedEventArgs e)
+    {
+        // Show the text boxes when the button is clicked
+        textBoxWord.Visibility = Visibility.Visible;
+        textBoxDescription.Visibility = Visibility.Visible;
+        textBoxCategory.Visibility = Visibility.Visible;
+        textBoxImagePath.Visibility = Visibility.Visible;
+        Word.Visibility = Visibility.Visible;
+        Category.Visibility = Visibility.Visible;
+        Description.Visibility = Visibility.Visible;
+        Path.Visibility = Visibility.Visible;
+
+        }
     }
+
 }
