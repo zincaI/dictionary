@@ -15,3 +15,6 @@ C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\tema 1-dictionar\dictionary\dicti
 C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\tema 1-dictionar\dictionary\dictionary\obj\Debug\dictionary.pdb
 C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\tema 1-dictionar\dictionary\dictionary\obj\Debug\Login.g.cs
 C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\tema 1-dictionar\dictionary\dictionary\obj\Debug\Login.baml
+C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\tema 1-dictionar\dictionary\dictionary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\tema 1-dictionar\dictionary\dictionary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\tema 1-dictionar\dictionary\dictionary\obj\Debug\dictionary.csproj.CopyComplete

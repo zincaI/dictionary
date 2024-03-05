@@ -34,4 +34,41 @@ namespace dictionary
             secondForm.Show();
         }
     }
+
+    //enterAdmin_Click
+    public partial class Login : Window
+    {
+        private void CloseWindow()
+        {
+            this.Close();
+        }
+        private void enterAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string name = textBoxUsername.Text;
+                string password = passwordBoxPassword.Password;
+
+                // Call the FindAdmin method to check if the credentials are valid
+                bool isValid = People.FindAdmin(name, password);
+
+                if (isValid)
+                {
+                    MessageBox.Show("Login successful!");
+                    // Proceed with the logic for successful login
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password!");
+                    // Handle invalid login attempt
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+    }
 }
