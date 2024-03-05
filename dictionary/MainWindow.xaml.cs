@@ -28,10 +28,10 @@ namespace dictionary
         private void login_Click(object sender, EventArgs e)
         {
             // Instantiate SecondForm
-            Login secondForm = new Login();
+            Login login = new Login();
 
             // Display SecondForm
-            secondForm.Show();
+            login.Show();
         }
     }
 
@@ -54,9 +54,13 @@ namespace dictionary
 
                 if (isValid)
                 {
-                    MessageBox.Show("Login successful!");
-                    // Proceed with the logic for successful login
                     Close();
+                    // Instantiate SecondForm
+                    ManageWords words = new ManageWords();
+
+                    // Display SecondForm
+                    words.Show();
+
                 }
                 else
                 {
@@ -69,6 +73,11 @@ namespace dictionary
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
+
+    }
+
+    public partial class ManageWords : Window
+    {
 
     }
 }
