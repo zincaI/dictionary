@@ -18,6 +18,10 @@ namespace dictionary
         public string ImagePath { get; set; }
 
         // Constructor
+        public Words()
+        {
+
+        }
         public Words(string name, string description, string category, string imagePath)
         {
             Word = name;
@@ -29,30 +33,49 @@ namespace dictionary
         // Method to read words from JSON file
         public static List<Words> ReadWordsFromJson()
         {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "words.json");
             List<Words> wordsList;
-            if (File.Exists("words.json"))
+            try
             {
-                string json = File.ReadAllText("words.json");
-                wordsList = JsonConvert.DeserializeObject<List<Words>>(json);
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    wordsList = JsonConvert.DeserializeObject<List<Words>>(json);
+                }
+                else
+                {
+                    wordsList = new List<Words>();
+                }
             }
-            else
+            catch (Exception ex)
             {
+                Console.WriteLine("Error reading JSON file: " + ex.Message);
                 wordsList = new List<Words>();
             }
             return wordsList;
         }
 
-        // Method to write words to JSON file
         public static void WriteWordsToJson(List<Words> wordsList)
         {
-            string updatedJson = JsonConvert.SerializeObject(wordsList, Formatting.Indented);
-            File.WriteAllText("words.json", updatedJson);
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "words.json");
+            try
+            {
+                string updatedJson = JsonConvert.SerializeObject(wordsList, Formatting.Indented);
+                File.WriteAllText(filePath, updatedJson);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error writing to JSON file: " + ex.Message);
+            }
         }
 
-        public void AddWord(string name, string description, string category, string imagePath)
+
+
+        public void AddWord(string word, string description, string category, string imagePath)
         {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "words.json");
             List<Words> wordsList = ReadWordsFromJson();
-            wordsList.Add(new Words(name, description, category, imagePath));
+            wordsList.Add(new Words(word, description, category, imagePath));
             WriteWordsToJson(wordsList);
         }
     }
