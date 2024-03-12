@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace dictionary
 {
@@ -17,13 +20,29 @@ namespace dictionary
                 // Read the list of words from the JSON file
                 List<Words> wordsList = Words.ReadWordsFromJson();
 
-                // Clear the ListBox's ItemSource
-                wordListBox.ItemsSource = null;
+                // Clear the ListBox's Items
+                wordListBox.Items.Clear();
 
-                // Set the ListBox's ItemSource to the new data
-                // Format and set the ListBox's ItemSource to the new data
-                wordListBox.ItemsSource = wordsList.Select(word =>
-                    $"Word: {word.Word}\nCategory: {word.Category}\nDescription: {word.Description}\n");
+                // Populate the ListBox with words and images
+                foreach (var word in wordsList)
+                {
+                    StackPanel wordPanel = new StackPanel();
+
+                    // TextBlock for word details
+                    TextBlock wordTextBlock = new TextBlock();
+                    wordTextBlock.Text = $"Word: {word.Word}\nCategory: {word.Category}\nDescription: {word.Description}\n";
+                    wordPanel.Children.Add(wordTextBlock);
+
+                    // Image
+                    System.Windows.Controls.Image image = new System.Windows.Controls.Image();
+                    BitmapImage bitmapImage = new BitmapImage(new Uri(word.ImagePath)); // Assuming 'ImagePath' property holds the path of the image
+                    image.Source = bitmapImage;
+                    image.Width = 100; // Set width as needed
+                    image.Height = 100; // Set height as needed
+                    wordPanel.Children.Add(image);
+
+                    wordListBox.Items.Add(wordPanel);
+                }
             }
             catch (Exception ex)
             {
@@ -89,7 +108,11 @@ namespace dictionary
                 string description = textBoxDescription.Text;
                 string category = textBoxCategory.Text;
                 string imagePath = textBoxImagePath.Text;
-
+                if (imagePath == "")
+                {
+                    string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                    string imagePath = Path.Combine(basePath, "images", "default_image.jpg");
+                }
                 // Create an instance of the Words class
                 Words words = new Words();
                 if (word != "" && description != "" && category != "")
@@ -110,7 +133,7 @@ namespace dictionary
                 textBoxWord.Text = "";
                 textBoxDescription.Text = "";
                 textBoxCategory.Text = "";
-                textBoxImagePath.Text = "\"C:\\Users\\zinca\\OneDrive\\Desktop\\anul2\\sem2\\MAP\\tema 1-dictionar\\dictionary\\dictionary\\bin\\Debug\\images\\delault_image.jpg\"";
+                textBoxImagePath.Text = "";
             }
             catch (Exception ex)
             {

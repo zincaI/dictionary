@@ -1,56 +1,8 @@
 [
   {
-    "Word": "sdghet",
-    "Description": "ad",
-    "Category": "ff",
-    "ImagePath": "swgr"
-  },
-  {
-    "Word": "Loc sau construcție în care sunt depuse osemintele rezultate din deshumări",
-    "Description": "osuar",
-    "Category": "cladire",
-    "ImagePath": "\"C:\\Users\\zinca\\OneDrive\\Desktop\\anul2\\sem2\\MAP\\tema 1-dictionar\\dictionary\\dictionary\\osuar.jpg\""
-  },
-  {
-    "Word": "Liniștit, potolit.",
-    "Description": "ogoit",
-    "Category": "stare",
-    "ImagePath": "dfgb"
-  },
-  {
-    "Word": "Plantă erbacee din familia liliaceelor, cu bulb alungit, ascuțit la vârf, cu frunze lanceolate, groase și late, cu tulpina înaltă, care face o singură floare mare, de diverse culori",
-    "Description": "lalea",
-    "Category": "floare",
-    "ImagePath": "\"C:\\Users\\zinca\\OneDrive\\Desktop\\anul2\\sem2\\MAP\\tema 1-dictionar\\dictionary\\dictionary\\lalea.jpg\""
-  },
-  {
-    "Word": "",
-    "Description": "",
-    "Category": "",
-    "ImagePath": "Care este, se află, stă alături, în apropiere de cineva sau de ceva."
-  },
-  {
-    "Word": "we",
-    "Description": "qwerf",
-    "Category": "erghe",
-    "ImagePath": "\"C:\\Users\\zinca\\OneDrive\\Desktop\\anul2\\sem2\\MAP\\tema 1-dictionar\\dictionary\\dictionary\\bin\\Debug\\images\\delault_image.jpg\""
-  },
-  {
-    "Word": "ert",
-    "Description": "dgs",
-    "Category": "drh",
-    "ImagePath": "\"C:\\Users\\zinca\\OneDrive\\Desktop\\anul2\\sem2\\MAP\\tema 1-dictionar\\dictionary\\dictionary\\bin\\Debug\\images\\delault_image.jpg\""
-  },
-  {
-    "Word": "șervet",
-    "Description": "Bucată pătrată sau dreptunghiulară de pânză de in, de bumbac etc. folosită la masă pentru ștersul gurii",
-    "Category": "obiect",
-    "ImagePath": ""
-  },
-  {
-    "Word": "miraj",
-    "Description": "Imagine înșelătoare; închipuire, iluzie deșartă.",
-    "Category": "fenomen",
-    "ImagePath": ""
-  }
+    "Word": "g",
+    "Description": "i",
+    "Category": "y",
+    "ImagePath": "..\\bin\\Debug\\images\\default_image.jpg" 
+}
 ]
