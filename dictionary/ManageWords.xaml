@@ -34,19 +34,20 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
 
+            <RowDefinition Height="Auto"/>
 
 
         </Grid.RowDefinitions>
 
         <Button  Name="add" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="49,65,0,0" Grid.Row="2" Click="Add_Click"/>
-        <Button  Name="modify" Content="Modify word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="469,65,0,0" Grid.Row="2"/>
+        <Button  Name="modify" Content="Modify word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="469,65,0,0" Grid.Row="2" Click="Update_Click"/>
         <Button  Name="delete" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="259,65,0,0" Grid.Row="2"  Click="Delete_Click"/>
         <Button  Name="AddButton" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="373,273,0,0" Grid.Row="11"  Click="AddWord_Click"  Visibility="Collapsed"/>
         <Button  Name="DeleteButton" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="374,280,0,0" Grid.Row="11"  Click="DeleteWord_Click" Grid.RowSpan="5" Visibility="Collapsed"/>
-        <Button  Name="UpdateButton" Content="Update word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="64" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="364,273,0,0" Grid.Row="11"  Click="DeleteWord_Click" Visibility="Collapsed"/>
+        <Button  Name="UpdateButton" Content="Update word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="64" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="364,273,0,0" Grid.Row="11"  Click="UpdateWord_Click" Visibility="Collapsed"/>
         <Button  Name="AbandonAddButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="78,273,0,0" Grid.Row="11"  Click="AbandonAddButton_Click"  Visibility="Collapsed"/>
         <Button  Name="AbandonDeleteButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="78,273,0,0" Grid.Row="11"  Click="AbandonDeleteButton_Click"  Visibility="Collapsed"/>
-        <Button  Name="AbandonUpdateButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="92,270,0,0" Grid.Row="22"  Click="AbandonModifyWord_Click"  Visibility="Collapsed"/>
+        <Button  Name="AbandonUpdateButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="92,270,0,0" Grid.Row="22"  Click="AbandonModifyWordButton_Click"/>
 
 
         <TextBox x:Name="textBoxDescription" FontSize="23" Grid.Row="10" Margin="49,173,539,-250" RenderTransformOrigin="0.496,8.843" Visibility="Collapsed"/>

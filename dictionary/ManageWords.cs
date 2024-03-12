@@ -43,9 +43,9 @@ namespace dictionary
 
 
             // Show the "Update" button if it's properly initialized and accessible
-            if (UpdateButton != null)
+            if (AddButton != null)
             {
-                UpdateButton.Visibility = Visibility.Visible;
+                AddButton.Visibility = Visibility.Visible;
                 AbandonAddButton.Visibility = Visibility.Visible;
             }
             else
@@ -68,9 +68,9 @@ namespace dictionary
             Path.Visibility = Visibility.Collapsed;
 
             // Show the "Update" button if it's properly initialized and accessible
-            if (UpdateButton != null)
+            if (AddButton != null)
             {
-                UpdateButton.Visibility = Visibility.Collapsed;
+                AddButton.Visibility = Visibility.Collapsed;
                 AbandonAddButton.Visibility= Visibility.Collapsed;
             }
             
@@ -191,6 +191,57 @@ namespace dictionary
             }
         }
 
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            // Show the text boxes when the button is clicked
+            textBoxWordUpdate.Visibility = Visibility.Visible;
+            textBoxDescriptionUpdate.Visibility = Visibility.Visible;
+            textBoxCategoryUpdate.Visibility = Visibility.Visible;
+            textBoxImagePathUpdate.Visibility = Visibility.Visible;
+            WordUpdate.Visibility = Visibility.Visible;
+            CategoryUpdate.Visibility = Visibility.Visible;
+            DescriptionUpdate.Visibility = Visibility.Visible;
+            PathUpdate.Visibility = Visibility.Visible;
+
+
+            if (UpdateButton != null && AbandonUpdateButton != null)
+            {
+                UpdateButton.Visibility = Visibility.Visible;
+                AbandonUpdateButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                // Handle the case where the UpdateButton or AbandonUpdateButton is not properly initialized
+                MessageBox.Show("UpdateButton or AbandonUpdateButton is not properly initialized.");
+            }
+        }
+
+        private void UpdateWord_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RetrieveVisabilityUpdate(object sender, RoutedEventArgs e)
+        {
+            // Show the text boxes when the button is clicked
+            textBoxWordUpdate.Visibility = Visibility.Collapsed;
+            textBoxDescriptionUpdate.Visibility = Visibility.Collapsed;
+            textBoxCategoryUpdate.Visibility = Visibility.Collapsed;
+            textBoxImagePathUpdate.Visibility = Visibility.Collapsed;
+            WordUpdate.Visibility = Visibility.Collapsed;
+            CategoryUpdate.Visibility = Visibility.Collapsed;
+            DescriptionUpdate.Visibility = Visibility.Collapsed;
+            PathUpdate.Visibility = Visibility.Collapsed;
+
+            // Show the "Update" button if it's properly initialized and accessible
+            if (UpdateButton != null)
+            {
+                UpdateButton.Visibility = Visibility.Collapsed;
+                AbandonUpdateButton.Visibility = Visibility.Collapsed;
+            }
+
+        }
+
         private void AbandonAddButton_Click(object sender, RoutedEventArgs e)
         {
             RetrieveVisabilityAdd(sender, e);
@@ -203,9 +254,9 @@ namespace dictionary
 
         }
 
-        private void AbandonModifyWord_Click(object sender, RoutedEventArgs e)
+        private void AbandonModifyWordButton_Click(object sender, RoutedEventArgs e)
         {
-
+            RetrieveVisabilityUpdate(sender, e);
         }
 
     }
