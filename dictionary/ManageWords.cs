@@ -194,6 +194,8 @@ namespace dictionary
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             // Show the text boxes when the button is clicked
+            SearchBox.Visibility = Visibility.Visible;
+            SearchText.Visibility = Visibility.Visible;
             textBoxWordUpdate.Visibility = Visibility.Visible;
             textBoxDescriptionUpdate.Visibility = Visibility.Visible;
             textBoxCategoryUpdate.Visibility = Visibility.Visible;
@@ -202,6 +204,7 @@ namespace dictionary
             CategoryUpdate.Visibility = Visibility.Visible;
             DescriptionUpdate.Visibility = Visibility.Visible;
             PathUpdate.Visibility = Visibility.Visible;
+         
 
 
             if (UpdateButton != null && AbandonUpdateButton != null)
@@ -218,8 +221,52 @@ namespace dictionary
 
         private void UpdateWord_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                // Retrieve the content of the text boxes
+                string updatedWord = textBoxWordUpdate.Text;
+                string updatedDescription = textBoxDescriptionUpdate.Text;
+                string updatedCategory = textBoxCategoryUpdate.Text;
+                string updatedImagePath = textBoxImagePathUpdate.Text;
 
+                List<Words> wordsList = Words.ReadWordsFromJson();
+
+                // Find the word to update in the wordsList
+                Words selectedWord = wordsList.FirstOrDefault(w => w.Word.Equals(updatedWord, StringComparison.OrdinalIgnoreCase));
+
+                if (selectedWord != null)
+                {
+                    // Update the properties of the selected word
+                    selectedWord.Description = updatedDescription;
+                    selectedWord.Category = updatedCategory;
+                    selectedWord.ImagePath = updatedImagePath;
+
+                    // Write the updated list of words back to the JSON file
+                    Words.WriteWordsToJson(wordsList);
+
+                    // Optionally, you can show a message box to indicate success
+                    MessageBox.Show("Word updated successfully!");
+                    RetrieveVisabilityUpdate(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Word not found for update.");
+                }
+
+                // Clear the text boxes after updating the word
+                textBoxWordUpdate.Text = "";
+                textBoxDescriptionUpdate.Text = "";
+                textBoxCategoryUpdate.Text = "";
+                textBoxImagePathUpdate.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
+
+
+
 
         private void RetrieveVisabilityUpdate(object sender, RoutedEventArgs e)
         {
@@ -232,6 +279,8 @@ namespace dictionary
             CategoryUpdate.Visibility = Visibility.Collapsed;
             DescriptionUpdate.Visibility = Visibility.Collapsed;
             PathUpdate.Visibility = Visibility.Collapsed;
+            SearchBox.Visibility = Visibility.Collapsed;
+            SearchText.Visibility = Visibility.Collapsed;
 
             // Show the "Update" button if it's properly initialized and accessible
             if (UpdateButton != null)

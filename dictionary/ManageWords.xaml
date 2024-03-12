@@ -17,12 +17,6 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
 
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -35,7 +29,16 @@
             <RowDefinition Height="Auto"/>
 
             <RowDefinition Height="Auto"/>
-
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
 
         </Grid.RowDefinitions>
 
@@ -44,10 +47,11 @@
         <Button  Name="delete" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="259,65,0,0" Grid.Row="2"  Click="Delete_Click"/>
         <Button  Name="AddButton" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="373,273,0,0" Grid.Row="11"  Click="AddWord_Click"  Visibility="Collapsed"/>
         <Button  Name="DeleteButton" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="374,280,0,0" Grid.Row="11"  Click="DeleteWord_Click" Grid.RowSpan="5" Visibility="Collapsed"/>
-        <Button  Name="UpdateButton" Content="Update word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="64" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="364,273,0,0" Grid.Row="11"  Click="UpdateWord_Click" Visibility="Collapsed"/>
+        <Button  Name="UpdateButton" Content="Update word" HorizontalAlignment="Left" VerticalAlignment="Center" Width="196" Height="60" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="370,0,0,0" Grid.Row="27"  Click="UpdateWord_Click"  Visibility="Collapsed"/>
         <Button  Name="AbandonAddButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="78,273,0,0" Grid.Row="11"  Click="AbandonAddButton_Click"  Visibility="Collapsed"/>
         <Button  Name="AbandonDeleteButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="78,273,0,0" Grid.Row="11"  Click="AbandonDeleteButton_Click"  Visibility="Collapsed"/>
-        <Button  Name="AbandonUpdateButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="92,270,0,0" Grid.Row="22"  Click="AbandonModifyWordButton_Click"/>
+        <Button  Name="AbandonUpdateButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" Height="58" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="65,178,0,0" Grid.Row="27"  Click="AbandonModifyWordButton_Click" RenderTransformOrigin="0.478,1.092"   Visibility="Collapsed"/>
+
 
 
         <TextBox x:Name="textBoxDescription" FontSize="23" Grid.Row="10" Margin="49,173,539,-250" RenderTransformOrigin="0.496,8.843" Visibility="Collapsed"/>
@@ -61,15 +65,19 @@
         <TextBlock Name="Path" Text="Path" Grid.Row="10" HorizontalAlignment="Left" Margin="292,78,0,-240" Visibility="Collapsed"/>
         <TextBlock Name="Description" Text="Description" Grid.Row="10" HorizontalAlignment="Left" Margin="273,134,0,-296" Visibility="Collapsed"/>
 
-        <TextBlock Name="WordUpdate" Text="Word" Grid.Row="10" HorizontalAlignment="Left" Margin="156,10,0,-172"  Visibility="Collapsed"/>
-        <TextBlock Name="CategoryUpdate" Text="Category" Grid.Row="10" HorizontalAlignment="Left" Margin="444,10,0,-172"  Visibility="Collapsed"/>
-        <TextBlock Name="PathUpdate" Text="Path" Grid.Row="10" HorizontalAlignment="Left" Margin="292,78,0,-240"  Visibility="Collapsed"/>
-        <TextBlock Name="DescriptionUpdate" Text="Description" Grid.Row="10" HorizontalAlignment="Left" Margin="273,134,0,-296"  Visibility="Collapsed"/>
+        <TextBlock Name="WordUpdate" Text="Word" Grid.Row="10" HorizontalAlignment="Left" Margin="156,91,0,244" Grid.RowSpan="18"   Visibility="Collapsed"/>
+        <TextBlock Name="CategoryUpdate" Text="Category" Grid.Row="10" HorizontalAlignment="Left" Margin="444,91,0,244" Grid.RowSpan="18"   Visibility="Collapsed"/>
+        <TextBlock Name="PathUpdate" Text="Path" Grid.Row="10" HorizontalAlignment="Left" Margin="292,152,0,176" Grid.RowSpan="18"   Visibility="Collapsed"/>
+        <TextBlock Name="DescriptionUpdate" Text="Description" Grid.Row="10" HorizontalAlignment="Left" Margin="273,210,0,120" Grid.RowSpan="18"   Visibility="Collapsed"/>
 
-        <TextBox x:Name="textBoxDescriptionUpdate" FontSize="23" Grid.Row="10" Margin="49,173,539,-250" RenderTransformOrigin="0.496,8.843"  Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxCategoryUpdate" FontSize="23" Grid.Row="10" Margin="332,36,539,-69" RenderTransformOrigin="0.496,8.843"  Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxWordUpdate" FontSize="18" Grid.Row="10" Margin="49,36,828,-69" RenderTransformOrigin="0.496,8.843"  Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxImagePathUpdate" FontSize="23" Grid.Row="10" Margin="49,96,539,-129" RenderTransformOrigin="0.496,8.843"  Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxDescriptionUpdate" FontSize="23" Grid.Row="27" Margin="44,24,538,360" RenderTransformOrigin="0.496,8.843"   Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxCategoryUpdate" FontSize="23" Grid.Row="10" Margin="332,115,539,416" RenderTransformOrigin="0.496,8.843" Grid.RowSpan="18"   Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxWordUpdate" FontSize="18" Grid.Row="10" Margin="44,111,833,9" RenderTransformOrigin="0.496,8.843"   Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxImagePathUpdate" FontSize="23" Grid.Row="27" Margin="44,97,539,269" RenderTransformOrigin="0.496,8.843"   Visibility="Collapsed"/>
+
+        <TextBox x:Name="SearchBox" FontSize="23" Grid.Row="10" Margin="232,43,601,70" RenderTransformOrigin="0.496,8.843"   Visibility="Collapsed"/>
+        <TextBlock Name="SearchText" Text="Word to update:" Grid.Row="10" HorizontalAlignment="Left" Margin="110,54,0,23"   Visibility="Collapsed"/>
+
 
         <ListBox Name="wordListBox" 
          Grid.Row="2" 
