@@ -58,6 +58,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Login.cs" />
+    <Compile Include="ManageWords.cs" />
     <Compile Include="Words.cs" />
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
@@ -110,7 +112,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="words.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
