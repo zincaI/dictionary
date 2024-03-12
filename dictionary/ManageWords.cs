@@ -41,10 +41,12 @@ namespace dictionary
             Description.Visibility = Visibility.Visible;
             Path.Visibility = Visibility.Visible;
 
+
             // Show the "Update" button if it's properly initialized and accessible
             if (UpdateButton != null)
             {
                 UpdateButton.Visibility = Visibility.Visible;
+                AbandonAddButton.Visibility = Visibility.Visible;
             }
             else
             {
@@ -69,6 +71,7 @@ namespace dictionary
             if (UpdateButton != null)
             {
                 UpdateButton.Visibility = Visibility.Collapsed;
+                AbandonAddButton.Visibility= Visibility.Collapsed;
             }
             
         }
@@ -121,6 +124,7 @@ namespace dictionary
             if (DeleteButton != null)
             {
                 DeleteButton.Visibility = Visibility.Visible;
+                AbandonDeleteButton.Visibility = Visibility.Visible;
             }
             else
             {
@@ -138,6 +142,7 @@ namespace dictionary
             if (DeleteButton != null)
             {
                 DeleteButton.Visibility = Visibility.Collapsed;
+                AbandonDeleteButton.Visibility= Visibility.Collapsed;
             }
             else
             {
@@ -186,7 +191,22 @@ namespace dictionary
             }
         }
 
+        private void AbandonAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            RetrieveVisabilityAdd(sender, e);
 
+        }
+
+        private void AbandonDeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            RetrieveVisabilityDelete(sender, e);
+
+        }
+
+        private void AbandonModifyWord_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
     }
 }

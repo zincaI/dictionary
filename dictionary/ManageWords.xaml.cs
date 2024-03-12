@@ -23,5 +23,6 @@ namespace dictionary
         {
             InitializeComponent();
         }
+
     }
 }
