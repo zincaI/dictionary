@@ -21,13 +21,16 @@ namespace dictionary
                 wordListBox.ItemsSource = null;
 
                 // Set the ListBox's ItemSource to the new data
-                wordListBox.ItemsSource = wordsList;
+                // Format and set the ListBox's ItemSource to the new data
+                wordListBox.ItemsSource = wordsList.Select(word =>
+                    $"Word: {word.Word}\nCategory: {word.Category}\nDescription: {word.Description}\n");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while reading from the JSON file: " + ex.Message);
             }
         }
+
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -228,18 +231,24 @@ namespace dictionary
                 string updatedDescription = textBoxDescriptionUpdate.Text;
                 string updatedCategory = textBoxCategoryUpdate.Text;
                 string updatedImagePath = textBoxImagePathUpdate.Text;
+                string initialWord= SearchBox.Text;
 
                 List<Words> wordsList = Words.ReadWordsFromJson();
 
                 // Find the word to update in the wordsList
-                Words selectedWord = wordsList.FirstOrDefault(w => w.Word.Equals(updatedWord, StringComparison.OrdinalIgnoreCase));
-
+                Words selectedWord = wordsList.FirstOrDefault(w => w.Word.Equals(initialWord, StringComparison.OrdinalIgnoreCase));
+                MessageBox.Show(initialWord);
                 if (selectedWord != null)
                 {
                     // Update the properties of the selected word
-                    selectedWord.Description = updatedDescription;
-                    selectedWord.Category = updatedCategory;
-                    selectedWord.ImagePath = updatedImagePath;
+                    if (updatedDescription != null)
+                        selectedWord.Description = updatedDescription;
+                    if (updatedCategory != null)
+                        selectedWord.Category = updatedCategory;
+                    if (updatedImagePath != null)
+                        selectedWord.ImagePath = updatedImagePath;
+                    if (updatedWord != null)
+                        selectedWord.Word = updatedWord;
 
                     // Write the updated list of words back to the JSON file
                     Words.WriteWordsToJson(wordsList);
@@ -258,6 +267,7 @@ namespace dictionary
                 textBoxDescriptionUpdate.Text = "";
                 textBoxCategoryUpdate.Text = "";
                 textBoxImagePathUpdate.Text = "";
+                SearchBox.Text = "";
             }
             catch (Exception ex)
             {
