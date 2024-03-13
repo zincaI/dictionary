@@ -60,6 +60,9 @@
     </ApplicationDefinition>
     <Compile Include="Login.cs" />
     <Compile Include="ManageWords.cs" />
+    <Compile Include="Search_Words.xaml.cs">
+      <DependentUpon>Search_Words.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Words.cs" />
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
@@ -81,6 +84,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search_Words.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

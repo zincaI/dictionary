@@ -33,6 +33,15 @@ namespace dictionary
             // Display SecondForm
             login.Show();
         }
+
+        private void SearchWords_Click(object sender, EventArgs e)
+        {
+            // Instantiate SecondForm
+            Search_Words window = new Search_Words();
+
+            // Display SecondForm
+            window.Show();
+        }
     }
 
 

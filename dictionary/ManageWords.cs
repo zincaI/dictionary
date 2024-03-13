@@ -110,8 +110,7 @@ namespace dictionary
                 string imagePath = textBoxImagePath.Text;
                 if (imagePath == "")
                 {
-                    string basePath = AppDomain.CurrentDomain.BaseDirectory;
-                    string imagePath = Path.Combine(basePath, "images", "default_image.jpg");
+                    imagePath = "C:\\Users\\zinca\\OneDrive\\Desktop\\anul2\\sem2\\MAP\\TEMA1\\dictionary\\dictionary\\bin\\Debug\\images\\delault_image.jpg";
                 }
                 // Create an instance of the Words class
                 Words words = new Words();
