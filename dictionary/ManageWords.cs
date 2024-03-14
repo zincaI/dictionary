@@ -108,7 +108,8 @@ namespace dictionary
             }
             
         }
-        private void AddWord_Click(object sender, EventArgs e)
+
+        private void AddWord_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -117,45 +118,39 @@ namespace dictionary
                 string description = textBoxDescription.Text;
                 string category = textBoxCategory.Text;
                 string imagePath = textBoxImagePath.Text;
-
-
-
+               
                 // Verificați dacă calea imaginii este relativă sau absolută
                 if (!IsAbsolutePath(imagePath))
                 {
                     if (imagePath == "")
                         imagePath = "delault_image.jpg";
-                        // Dacă este relativă, adăugați directorul imaginilor în fața
-                        imagePath = imagesDirectory + imagePath;
+                    // Dacă este relativă, adăugați directorul imaginilor în fața
+                    imagePath = imagesDirectory + imagePath;
                     imagePath = imagePath.Replace("\\", "\\\\");
-                    
-                    MessageBox.Show(imagePath);
 
-                    
                 }
+                // Create an instance of the Words class
+                Words words = new Words();
+                if (word != "" && description != "" && category != "")
+                {// Call the AddWord method to add the word
+                    words.AddWord(word, description, category, imagePath);
 
-                // Verificați dacă fișierul de imagine există la calea specificată
-                if (File.Exists(imagePath))
-                {
-                  
-
-                    // Creați un nou obiect Words
-                    Words wordObj = new Words();
-
-                    // Adăugați cuvântul folosind metoda AddWord
-                    wordObj.AddWord(word, description, category, imagePath);
-
-                    // Serializați obiectul Words și scrieți-l în fișierul JSON
-                    string serializedWord = JsonConvert.SerializeObject(wordObj);
-                    File.WriteAllText("words.json", serializedWord);
 
                     // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word added successfully!");
+                    RetrieveVisabilityAdd(sender, e);
+                    PopulateWordListBox();
                 }
                 else
                 {
-                    MessageBox.Show("Image file does not exist at the specified path.");
+                    MessageBox.Show("Invalid word!");
                 }
+
+                // Optionally, you can clear the text boxes after adding the word
+                textBoxWord.Text = "";
+                textBoxDescription.Text = "";
+                textBoxCategory.Text = "";
+                textBoxImagePath.Text = "";
             }
             catch (Exception ex)
             {
@@ -291,7 +286,18 @@ namespace dictionary
                     if (updatedCategory != null)
                         selectedWord.Category = updatedCategory;
                     if (updatedImagePath != null)
-                        selectedWord.ImagePath = updatedImagePath;
+                    {
+                        if (!IsAbsolutePath(updatedImagePath))
+                        {
+                            if (updatedImagePath == "")
+                                updatedImagePath = "delault_image.jpg";
+                            // Dacă este relativă, adăugați directorul imaginilor în fața
+                            updatedImagePath = imagesDirectory + updatedImagePath;
+                            updatedImagePath = updatedImagePath.Replace("\\", "\\\\");
+
+                            MessageBox.Show(updatedImagePath);
+                        }
+                    }
                     if (updatedWord != null)
                         selectedWord.Word = updatedWord;
 
