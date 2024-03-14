@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +15,15 @@ namespace dictionary
 
     public partial class ManageWords : Window
     {
-        public void PopulateWordListBox()
+        string imagesDirectory = Environment.CurrentDirectory + "\\images\\";
+
+        // Verifică dacă calea este absolută
+        private bool IsAbsolutePath(string path)
+        {
+            return !string.IsNullOrEmpty(path) && (path[0] == '/' || path[0] == '\\' || path.Contains(":/"));
+        }
+    
+    public void PopulateWordListBox()
         {
             try
             {
@@ -77,6 +87,7 @@ namespace dictionary
             }
         }
 
+
         private void RetrieveVisabilityAdd(object sender, RoutedEventArgs e)
         {
             // Show the text boxes when the button is clicked
@@ -97,9 +108,7 @@ namespace dictionary
             }
             
         }
-
-
-        private void AddWord_Click(object sender, RoutedEventArgs e)
+        private void AddWord_Click(object sender, EventArgs e)
         {
             try
             {
@@ -108,31 +117,45 @@ namespace dictionary
                 string description = textBoxDescription.Text;
                 string category = textBoxCategory.Text;
                 string imagePath = textBoxImagePath.Text;
-                if (imagePath == "")
-                {
-                    imagePath = "C:\\Users\\zinca\\OneDrive\\Desktop\\anul2\\sem2\\MAP\\TEMA1\\dictionary\\dictionary\\bin\\Debug\\images\\delault_image.jpg";
-                }
-                // Create an instance of the Words class
-                Words words = new Words();
-                if (word != "" && description != "" && category != "")
-                {// Call the AddWord method to add the word
-                    words.AddWord(word, description, category, imagePath);
 
+
+
+                // Verificați dacă calea imaginii este relativă sau absolută
+                if (!IsAbsolutePath(imagePath))
+                {
+                    if (imagePath == "")
+                        imagePath = "delault_image.jpg";
+                        // Dacă este relativă, adăugați directorul imaginilor în fața
+                        imagePath = imagesDirectory + imagePath;
+                    imagePath = imagePath.Replace("\\", "\\\\");
+                    
+                    MessageBox.Show(imagePath);
+
+                    
+                }
+
+                // Verificați dacă fișierul de imagine există la calea specificată
+                if (File.Exists(imagePath))
+                {
+                  
+
+                    // Creați un nou obiect Words
+                    Words wordObj = new Words();
+
+                    // Adăugați cuvântul folosind metoda AddWord
+                    wordObj.AddWord(word, description, category, imagePath);
+
+                    // Serializați obiectul Words și scrieți-l în fișierul JSON
+                    string serializedWord = JsonConvert.SerializeObject(wordObj);
+                    File.WriteAllText("words.json", serializedWord);
 
                     // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word added successfully!");
-                    RetrieveVisabilityAdd(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Invalid word!");
+                    MessageBox.Show("Image file does not exist at the specified path.");
                 }
-
-                // Optionally, you can clear the text boxes after adding the word
-                textBoxWord.Text = "";
-                textBoxDescription.Text = "";
-                textBoxCategory.Text = "";
-                textBoxImagePath.Text = "";
             }
             catch (Exception ex)
             {
