@@ -278,15 +278,15 @@ namespace dictionary
 
                 // Find the word to update in the wordsList
                 Words selectedWord = wordsList.FirstOrDefault(w => w.Word.Equals(initialWord, StringComparison.OrdinalIgnoreCase));
-                MessageBox.Show(initialWord);
+                
                 if (selectedWord != null)
                 {
                     // Update the properties of the selected word
-                    if (updatedDescription != null)
+                    if (updatedDescription != "")
                         selectedWord.Description = updatedDescription;
-                    if (updatedCategory != null)
+                    if (updatedCategory != "")
                         selectedWord.Category = updatedCategory;
-                    if (updatedImagePath != null)
+                    if (updatedImagePath != "")
                     {
                         if (!IsAbsolutePath(updatedImagePath))
                         {
@@ -295,20 +295,24 @@ namespace dictionary
                             // Dacă este relativă, adăugați directorul imaginilor în fața
                             updatedImagePath = imagesDirectory + updatedImagePath;
                             updatedImagePath = updatedImagePath.Replace("\\", "\\\\");
+                            selectedWord.ImagePath = updatedImagePath;
 
-                            MessageBox.Show(updatedImagePath);
+
+
                         }
                     }
-                    if (updatedWord != null)
+                    if (updatedWord != "")
                         selectedWord.Word = updatedWord;
 
                     // Write the updated list of words back to the JSON file
+                    
                     Words.WriteWordsToJson(wordsList);
 
                     // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word updated successfully!");
                     RetrieveVisabilityUpdate(sender, e);
                     PopulateWordListBox();
+
                 }
                 else
                 {
@@ -327,9 +331,6 @@ namespace dictionary
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
-
-
-
 
         private void RetrieveVisabilityUpdate(object sender, RoutedEventArgs e)
         {

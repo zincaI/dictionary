@@ -42,10 +42,10 @@
         <TextBlock Name="Path" Text="Path" HorizontalAlignment="Left" Margin="248,256,0,347" Width="28" Visibility="Collapsed"/>
         <TextBlock Name="Description" Text="Description" HorizontalAlignment="Left" Margin="218,386,0,213" Visibility="Collapsed"/>
 
-        <TextBlock Name="WordUpdate" Text="Word" HorizontalAlignment="Left" Margin="109,199,0,511"/>
-        <TextBlock Name="CategoryUpdate" Text="Category" HorizontalAlignment="Left" Margin="389,197,0,501" RenderTransformOrigin="0.209,0.697"/>
-        <TextBlock Name="PathUpdate" Text="Path" HorizontalAlignment="Left" Margin="252,292,0,365" Width="47"/>
-        <TextBlock Name="DescriptionUpdate" Text="Description" HorizontalAlignment="Left" Margin="239,401,0,251"/>
+        <TextBlock Name="WordUpdate" Text="Word" HorizontalAlignment="Left" Margin="109,199,0,477"/>
+        <TextBlock Name="CategoryUpdate" Text="Category" HorizontalAlignment="Left" Margin="389,197,0,472" RenderTransformOrigin="0.209,0.697"/>
+        <TextBlock Name="PathUpdate" Text="Path" HorizontalAlignment="Left" Margin="252,292,0,308" Width="47"/>
+        <TextBlock Name="DescriptionUpdate" Text="Description" HorizontalAlignment="Left" Margin="239,401,0,200" Width="106"/>
 
         <TextBox x:Name="textBoxDescriptionUpdate" FontSize="23" Margin="10,428,796,200"/>
         <TextBox x:Name="textBoxCategoryUpdate" FontSize="23" Margin="299,225,796,439"/>
