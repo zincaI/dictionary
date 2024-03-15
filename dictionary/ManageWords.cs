@@ -219,6 +219,7 @@ namespace dictionary
                     // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word deleted successfully!");
                     RetrieveVisabilityDelete(sender, e);
+                    PopulateWordListBox();
                 }
                 else
                 {
@@ -307,6 +308,7 @@ namespace dictionary
                     // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word updated successfully!");
                     RetrieveVisabilityUpdate(sender, e);
+                    PopulateWordListBox();
                 }
                 else
                 {
