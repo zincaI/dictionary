@@ -1,21 +1,9 @@
 [
   {
-    "Word": "bucurie",
-    "Description": "",
-    "Category": "sentiment",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
     "Word": "lalea",
     "Description": "O floare",
     "Category": "floare",
     "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\lalea.jpg"
-  },
-  {
-    "Word": "h",
-    "Description": "gh",
-    "Category": "fg",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
   },
   {
     "Word": "h",
@@ -24,15 +12,9 @@
     "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
   },
   {
-    "Word": "g",
-    "Description": "g",
-    "Category": "ghj",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "gh",
-    "Description": "erftghyujik",
-    "Category": "gh",
+    "Word": "lalea",
+    "Description": "Plantă erbacee din familia liliaceelor, cu bulb alungit, ascuțit la vârf, cu frunze lanceolate, groase și late, cu tulpina înaltă, care face o singură floare mare, de diverse culori",
+    "Category": "floare",
     "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\lalea.jpg"
   },
   {

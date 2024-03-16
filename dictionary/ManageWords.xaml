@@ -11,14 +11,14 @@
         <Button  Name="add" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,57,0,0" Click="Add_Click"/>
         <Button  Name="modify" Content="Modify word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="360,57,0,0" Click="Update_Click"/>
         <Button  Name="delete" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="191,57,0,0"  Click="Delete_Click"/>
-        <Button  Name="AddButton" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="286,642,0,0"  Click="AddWord_Click"  />
+        <Button  Name="AddButton" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="286,642,0,0"  Click="AddWord_Click" Visibility="Collapsed"/>
         <Button  Name="DeleteButton" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="326,484,0,0" Click="DeleteWord_Click"  Visibility="Collapsed"/>
         <Button  Name="UpdateButton" Content="Update word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="60" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="314,641,0,0" Click="UpdateWord_Click" Visibility="Collapsed"/>
-        <Button  Name="AbandonAddButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,649,0,0" Click="AbandonAddButton_Click"   />
+        <Button  Name="AbandonAddButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,649,0,0" Click="AbandonAddButton_Click"     Visibility="Collapsed"/>
         <Button  Name="AbandonDeleteButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="62,484,0,0" Click="AbandonDeleteButton_Click" Visibility="Collapsed" />
         <Button  Name="AbandonUpdateButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" Height="58" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,641,0,0" Click="AbandonModifyWordButton_Click" Visibility="Collapsed"/>
 
-        <TextBox x:Name="textBoxDescription" FontSize="23" Margin="37,565,822,109"/>
+        <TextBox x:Name="textBoxDescription" FontSize="23" Margin="37,565,822,109"  Visibility="Collapsed"/>
         <TextBox x:Name="textBoxNewCategory" FontSize="23" Margin="306,191,811,487" Visibility="Collapsed"/>
         <ListBox x:Name="listBoxCategory" FontSize="23" Margin="305,297,812,376"  Visibility="Collapsed"/>
 
@@ -35,7 +35,7 @@
 
         <TextBlock Name="Category" Text="Category" HorizontalAlignment="Left" Margin="373,141,0,458" Visibility="Collapsed"/>
         <TextBlock Name="Path" Text="Path" HorizontalAlignment="Left" Margin="248,373,0,230" Width="28"  Visibility="Collapsed"/>
-        <TextBlock Name="Description" Text="Description" HorizontalAlignment="Left" Margin="232,489,0,166" />
+        <TextBlock Name="Description" Text="Description" HorizontalAlignment="Left" Margin="232,489,0,166"  Visibility="Collapsed" />
 
         <TextBlock Name="WordUpdate" Text="Word" HorizontalAlignment="Left" Margin="109,199,0,477" Visibility="Collapsed"/>
         <TextBlock Name="CategoryUpdate" Text="Category" HorizontalAlignment="Left" Margin="389,197,0,472" RenderTransformOrigin="0.209,0.697" Visibility="Collapsed"/>

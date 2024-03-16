@@ -1,56 +1,92 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media.Imaging;
+using System.Windows.Controls;
 
 namespace dictionary
 {
     public partial class Search_Words : Window
     {
+        private List<string> wordList;
+        private List<Words> wordsList;
+
         public Search_Words()
         {
             InitializeComponent();
-        }
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-            //var words = new List<string>(); 
-            string searchedWords = SearchBar.Text;
-            //foreach (var word in words)
-            //{
-
-            //}
+            LoadWordListFromJson();
+            //SearchTextBox.TextChanged += SearchTextBox_TextChanged;
         }
 
-        public void PopulateWordDetails(string searchedWord)
+        private void LoadWordListFromJson()
         {
             try
             {
-                // Read the list of words from the JSON file
-                List<Words> wordsList = Words.ReadWordsFromJson();
+                wordsList = Words.ReadWordsFromJson(); // Modificare aici
+                wordList = wordsList.Select(word => word.Word).ToList();
+                SearchBar.ItemsSource = wordList;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading words from JSON file: " + ex.Message);
+            }
+        }
 
-                // Clear the TextBlock's content
-                SearchedWord.Text = "";
 
-                // Find the word in the list
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchText = SearchTextBox.Text.ToLower();
+
+            // Filtrăm lista de cuvinte
+            var filteredWords = wordList.Where(word => word.ToLower().StartsWith(searchText)).ToList();
+
+            // Actualizăm lista afișată în ListBox
+            SearchBar.ItemsSource = filteredWords;
+        }
+
+        private void SearchBar_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedWord = SearchBar.SelectedItem as string;
+            if (selectedWord != null)
+            {
+                PopulateWordDetails(selectedWord);
+            }
+        }
+
+        private void SearchWord_Click(object sender, RoutedEventArgs e)
+        {
+            if (SearchBar.SelectedItem != null)
+            {
+           
+                string searchedWord = SearchBar.SelectedItem.ToString();
+                PopulateWordDetails(searchedWord);
+            }
+            else
+            {
+                MessageBox.Show("No word selected.");
+            }
+        }
+
+        private void PopulateWordDetails(string searchedWord)
+        {
+            try
+            {
+                
+
                 var word = wordsList.FirstOrDefault(w => w.Word.Equals(searchedWord, StringComparison.OrdinalIgnoreCase));
+                
 
                 if (word != null)
                 {
-                    // Update the TextBlock with word details
                     SearchedWord.Text = $"Word: {word.Word}\nCategory: {word.Category}\nDescription: {word.Description}\n";
-
-                    // Load and display image
                     if (!string.IsNullOrEmpty(word.ImagePath))
                     {
-                        // Assuming you have an Image control named ImageDisplay
-                        ImageDisplay.Source = new BitmapImage(new Uri(word.ImagePath, UriKind.RelativeOrAbsolute));
+                        ImageDisplay.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(word.ImagePath, UriKind.RelativeOrAbsolute));
                     }
                     else
                     {
-                        // Clear the image if no image path is provided
                         ImageDisplay.Source = null;
                     }
                 }
@@ -61,30 +97,8 @@ namespace dictionary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while reading from the JSON file: " + ex.Message);
+                MessageBox.Show("An error occurred while populating word details: " + ex.Message);
             }
-        }
-
-        private void SearchWord_Click(object sender, RoutedEventArgs e)
-        {
-            string searchedWord = SearchBar.Text.Trim();
-
-            if (!string.IsNullOrEmpty(searchedWord))
-            {
-                // Call the PopulateWordDetails function with the searched word
-                PopulateWordDetails(searchedWord);
-            }
-            else
-            {
-                MessageBox.Show("Please enter a word to search.");
-            }
-        }
-
-        private void SearchBar_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-
         }
     }
-
-
 }

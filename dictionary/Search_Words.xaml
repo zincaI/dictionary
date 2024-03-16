@@ -1,12 +1,8 @@
 ﻿<Window x:Class="dictionary.Search_Words"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:dictionary"
-        mc:Ignorable="d"
         Title="Search_Words" Height="450" Width="800" Background="LightGray">
-    <Grid Margin="0,0,0,-46">
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -14,11 +10,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Name="SearchText" Text="Introduce word:" Grid.Row="4" HorizontalAlignment="Left" Margin="33,50,0,-66"/>
-        <TextBox x:Name="SearchBar" FontSize="23" Grid.Row="4" Margin="187,47,302,0" TextChanged="SearchBar_TextChanged"/>
-        <Button  Name="Search" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Height="32" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Grid.Row="4" Margin="563,49,0,0" Click="SearchWord_Click"/>
-        <TextBlock Name="SearchedWord" Grid.Row="4" HorizontalAlignment="Center" Margin="0,134,0,-99" Width="700" Height="Auto"  Background="White"/>
-        <Image x:Name="ImageDisplay" Grid.Row="4" HorizontalAlignment="Left" Margin="201,206,0,-343" Width="371"/>
+        <TextBlock Text="Introduce word:" Grid.Row="0" HorizontalAlignment="Left" Margin="10"/>
+        <TextBox x:Name="SearchTextBox" Margin="109,9,442,9" TextChanged="SearchTextBox_TextChanged"/>
+        <ListBox x:Name="SearchBar" Margin="10,30,396,300" Grid.Row="4"/>
+        <TextBlock Name="SearchedWord" HorizontalAlignment="Left" Margin="446,9,0,0" Width="334" Height="95" Grid.RowSpan="5" VerticalAlignment="Top"/>
+        <Image x:Name="ImageDisplay" Grid.Row="4" HorizontalAlignment="Left" Margin="469,38,0,155" Width="270"/>
+        <Button  Name="Search" Content="SearchWord" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="33" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="40,306,0,0" Grid.Row="4" Click="SearchWord_Click"/>
 
     </Grid>
 </Window>
