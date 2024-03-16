@@ -16,6 +16,5 @@
         <TextBlock Name="SearchedWord" HorizontalAlignment="Left" Margin="446,9,0,0" Width="334" Height="95" Grid.RowSpan="5" VerticalAlignment="Top"/>
         <Image x:Name="ImageDisplay" Grid.Row="4" HorizontalAlignment="Left" Margin="469,38,0,155" Width="270"/>
         <Button  Name="Search" Content="SearchWord" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="33" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="40,306,0,0" Grid.Row="4" Click="SearchWord_Click"/>
-
     </Grid>
 </Window>

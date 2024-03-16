@@ -79,12 +79,29 @@
     <Compile Include="AddWord.xaml.cs">
       <DependentUpon>AddWord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entertainment.xaml.cs">
+      <DependentUpon>Entertainment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinalScoreGame.xaml.cs">
+      <DependentUpon>FinalScoreGame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs" />
+    <Compile Include="RoundGame.xaml.cs">
+      <DependentUpon>RoundGame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Search_Words.xaml.cs">
       <DependentUpon>Search_Words.xaml</DependentUpon>
     </Compile>
     <Compile Include="Words.cs" />
     <Page Include="AddWord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Entertainment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinalScoreGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,6 +125,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoundGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

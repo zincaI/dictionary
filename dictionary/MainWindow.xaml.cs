@@ -42,6 +42,15 @@ namespace dictionary
             // Display SecondForm
             window.Show();
         }
+
+        private void Entertainment_Click(object sender, EventArgs e)
+        {
+            // Instantiate SecondForm
+            Entertainment startGame = new Entertainment();
+
+            // Display SecondForm
+            startGame.Show();
+        }
     }
 
 

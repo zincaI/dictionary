@@ -15,8 +15,7 @@
 
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Login" Grid.Row="2" HorizontalAlignment="Center" Margin="0,80,0,-104"
-           FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold"/>
+        <TextBlock Text="Login" Grid.Row="2" HorizontalAlignment="Center" Margin="0,80,0,-104" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold"/>
 
         <TextBox x:Name="textBoxUsername" FontSize="23" Grid.Row="2" Margin="214,162,214,-177" RenderTransformOrigin="0.496,8.843"/>
         <PasswordBox x:Name="passwordBoxPassword" FontSize="17" Grid.Row="2" Margin="214,236,214,-239" RenderTransformOrigin="0.392,12.117"/>

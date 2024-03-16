@@ -14,19 +14,14 @@ using System.Windows.Shapes;
 
 namespace dictionary
 {
-   
-    public partial class Entertainment : Window
+    /// <summary>
+    /// Interaction logic for FinalScoreGame.xaml
+    /// </summary>
+    public partial class FinalScoreGame : Window
     {
-        public Entertainment()
+        public FinalScoreGame()
         {
             InitializeComponent();
-        }
-
-        public void Start_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-            RoundGame rounds = new RoundGame();
-            rounds.Show();
         }
     }
 }
