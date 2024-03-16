@@ -286,6 +286,7 @@ namespace dictionary
                     MessageBox.Show("Word deleted successfully!");
                     RetrieveVisabilityDelete(sender, e);
                     PopulateWordListBox();
+
                 }
                 else
                 {
@@ -314,6 +315,8 @@ namespace dictionary
             CategoryUpdate.Visibility = Visibility.Visible;
             DescriptionUpdate.Visibility = Visibility.Visible;
             PathUpdate.Visibility = Visibility.Visible;
+            listBoxCategory.Visibility = Visibility.Visible;
+
 
 
 
@@ -336,9 +339,11 @@ namespace dictionary
                 // Retrieve the content of the text boxes
                 string updatedWord = textBoxWordUpdate.Text;
                 string updatedDescription = textBoxDescriptionUpdate.Text;
-                string updatedCategory = textBoxCategoryUpdate.Text;
+                string updateCategoryText = listBoxCategory.SelectedItem?.ToString() ?? textBoxCategoryUpdate.Text;
+                string updateCategoryList = listBoxCategory.SelectedItem?.ToString();
                 string updatedImagePath = textBoxImagePathUpdate.Text;
                 string initialWord = SearchBox.Text;
+               // string updatedCategory;
 
                 List<Words> wordsList = Words.ReadWordsFromJson();
 
@@ -350,8 +355,10 @@ namespace dictionary
                     // Update the properties of the selected word
                     if (updatedDescription != "")
                         selectedWord.Description = updatedDescription;
-                    if (updatedCategory != "")
-                        selectedWord.Category = updatedCategory;
+                    if (updateCategoryText != "")
+                        selectedWord.Category = updateCategoryText;
+                    if (!string.IsNullOrEmpty(updateCategoryList))
+                        selectedWord.Category = updateCategoryList;
                     if (updatedImagePath != "")
                     {
                         if (!IsAbsolutePath(updatedImagePath))
@@ -378,6 +385,11 @@ namespace dictionary
                     MessageBox.Show("Word updated successfully!");
                     RetrieveVisabilityUpdate(sender, e);
                     PopulateWordListBox();
+                    if (updateCategoryText != "")
+                    { 
+                        categories.Add(updateCategoryText);
+                        PopulateCategoryListBox(); 
+                    }
 
                 }
                 else
@@ -411,6 +423,8 @@ namespace dictionary
             PathUpdate.Visibility = Visibility.Collapsed;
             SearchBox.Visibility = Visibility.Collapsed;
             SearchText.Visibility = Visibility.Collapsed;
+            listBoxCategory.Visibility = Visibility.Collapsed;
+
 
             // Show the "Update" button if it's properly initialized and accessible
             if (UpdateButton != null)

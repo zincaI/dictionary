@@ -14,7 +14,7 @@
   {
     "Word": "h",
     "Description": "gh",
-    "Category": "i",
+    "Category": "fg",
     "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
   },
   {
@@ -51,6 +51,12 @@
     "Word": "hj",
     "Description": "fghj",
     "Category": "ghj",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
+  },
+  {
+    "Word": "asd",
+    "Description": "rty",
+    "Category": "asdf",
     "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
   }
 ]
