@@ -62,7 +62,6 @@
       <DependentUpon>AddWord.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
-    <Compile Include="ManageWords.cs" />
     <Compile Include="Search_Words.xaml.cs">
       <DependentUpon>Search_Words.xaml</DependentUpon>
     </Compile>

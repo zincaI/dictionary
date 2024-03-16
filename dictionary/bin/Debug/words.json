@@ -10,5 +10,47 @@
     "Description": "O floare",
     "Category": "floare",
     "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\lalea.jpg"
+  },
+  {
+    "Word": "h",
+    "Description": "gh",
+    "Category": "i",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
+  },
+  {
+    "Word": "h",
+    "Description": "h",
+    "Category": "h",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
+  },
+  {
+    "Word": "g",
+    "Description": "g",
+    "Category": "ghj",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
+  },
+  {
+    "Word": "gh",
+    "Description": "erftghyujik",
+    "Category": "gh",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\lalea.jpg"
+  },
+  {
+    "Word": "u",
+    "Description": "h",
+    "Category": "sentiment",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
+  },
+  {
+    "Word": "fgh",
+    "Description": "fgh",
+    "Category": "sentiment",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
+  },
+  {
+    "Word": "hj",
+    "Description": "fghj",
+    "Category": "ghj",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
   }
 ]

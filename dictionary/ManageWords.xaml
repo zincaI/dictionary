@@ -11,51 +11,45 @@
         <Button  Name="add" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,57,0,0" Click="Add_Click"/>
         <Button  Name="modify" Content="Modify word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="360,57,0,0" Click="Update_Click"/>
         <Button  Name="delete" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="191,57,0,0"  Click="Delete_Click"/>
-        <Button  Name="AddButton" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="288,554,0,0"  Click="AddWord_Click"  Visibility="Collapsed"/>
+        <Button  Name="AddButton" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="288,554,0,0"  Click="AddWord_Click"  />
         <Button  Name="DeleteButton" Content="Delete word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="326,484,0,0" Click="DeleteWord_Click"  Visibility="Collapsed"/>
-        <Button  Name="UpdateButton" Content="Update word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="60" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="314,590,0,0" Click="UpdateWord_Click"/>
-        <Button  Name="AbandonAddButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="48,554,0,0" Click="AbandonAddButton_Click"  Visibility="Collapsed"/>
+        <Button  Name="UpdateButton" Content="Update word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="60" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="314,590,0,0" Click="UpdateWord_Click" Visibility="Collapsed"/>
+        <Button  Name="AbandonAddButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="48,554,0,0" Click="AbandonAddButton_Click"  />
         <Button  Name="AbandonDeleteButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Height="54" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="62,484,0,0" Click="AbandonDeleteButton_Click" Visibility="Collapsed" />
-        <Button  Name="AbandonUpdateButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" Height="58" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,592,0,0" Click="AbandonModifyWordButton_Click" />
+        <Button  Name="AbandonUpdateButton" Content="Abandon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" Height="58" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,592,0,0" Click="AbandonModifyWordButton_Click" Visibility="Collapsed" />
 
-        <TextBox x:Name="textBoxDescription" FontSize="23" Margin="48,423,811,213"  Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxCategory" FontSize="23" Margin="306,191,811,487" Visibility="Collapsed">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="textBoxWord" FontSize="18" Margin="37,191,1080,487" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxDescription" FontSize="23" Margin="48,423,811,213"/>
+        <TextBox x:Name="textBoxNewCategory" FontSize="23" Margin="306,191,811,487"/>
+        <ListBox x:Name="listBoxCategory" FontSize="23" Margin="306,236,811,428"/>
 
 
-        <TextBox x:Name="textBoxImagePath" FontSize="23" Margin="44,308,811,365" Visibility="Collapsed"/>
+
+        <TextBox x:Name="textBoxWord" FontSize="18" Margin="37,191,1080,487" />
+
+
+        <TextBox x:Name="textBoxImagePath" FontSize="23" Margin="44,308,811,365" />
         <TextBox x:Name="textBoxDeletedWord" FontSize="23" Margin="49,306,811,344" Visibility="Collapsed"/>
 
-        <TextBlock Name="Word" Text="Word" HorizontalAlignment="Left" Margin="140,0,0,513" Height="71" VerticalAlignment="Bottom" Width="50"  Visibility="Collapsed"/>
+        <TextBlock Name="Word" Text="Word" HorizontalAlignment="Left" Margin="140,0,0,513" Height="71" VerticalAlignment="Bottom" Width="50" />
 
 
-        <TextBlock Name="Category" Text="Category" HorizontalAlignment="Left" Margin="373,141,0,458"  Visibility="Collapsed"/>
-        <TextBlock Name="Path" Text="Path" HorizontalAlignment="Left" Margin="248,256,0,347" Width="28" Visibility="Collapsed"/>
-        <TextBlock Name="Description" Text="Description" HorizontalAlignment="Left" Margin="218,386,0,213" Visibility="Collapsed"/>
+        <TextBlock Name="Category" Text="Category" HorizontalAlignment="Left" Margin="373,141,0,458"/>
+        <TextBlock Name="Path" Text="Path" HorizontalAlignment="Left" Margin="248,256,0,347" Width="28"/>
+        <TextBlock Name="Description" Text="Description" HorizontalAlignment="Left" Margin="218,386,0,213"/>
 
-        <TextBlock Name="WordUpdate" Text="Word" HorizontalAlignment="Left" Margin="109,199,0,477"/>
-        <TextBlock Name="CategoryUpdate" Text="Category" HorizontalAlignment="Left" Margin="389,197,0,472" RenderTransformOrigin="0.209,0.697"/>
-        <TextBlock Name="PathUpdate" Text="Path" HorizontalAlignment="Left" Margin="252,292,0,308" Width="47"/>
-        <TextBlock Name="DescriptionUpdate" Text="Description" HorizontalAlignment="Left" Margin="239,401,0,200" Width="106"/>
+        <TextBlock Name="WordUpdate" Text="Word" HorizontalAlignment="Left" Margin="109,199,0,477" Visibility="Collapsed"/>
+        <TextBlock Name="CategoryUpdate" Text="Category" HorizontalAlignment="Left" Margin="389,197,0,472" RenderTransformOrigin="0.209,0.697" Visibility="Collapsed"/>
+        <TextBlock Name="PathUpdate" Text="Path" HorizontalAlignment="Left" Margin="252,292,0,308" Width="47" Visibility="Collapsed"/>
+        <TextBlock Name="DescriptionUpdate" Text="Description" HorizontalAlignment="Left" Margin="239,401,0,200" Width="106" Visibility="Collapsed"/>
 
-        <TextBox x:Name="textBoxDescriptionUpdate" FontSize="23" Margin="10,428,796,200"/>
-        <TextBox x:Name="textBoxCategoryUpdate" FontSize="23" Margin="299,225,796,439"/>
-        <TextBox x:Name="textBoxWordUpdate" FontSize="18" Margin="10,225,1070,448" RenderTransformOrigin="0.5,0.5">
-            
-        </TextBox>
-        <TextBox x:Name="textBoxImagePathUpdate" FontSize="23" Margin="10,322,796,335"/>
+        <TextBox x:Name="textBoxDescriptionUpdate" FontSize="23" Margin="10,428,796,200" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxCategoryUpdate" FontSize="23" Margin="299,225,796,439" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxWordUpdate" FontSize="18" Margin="10,225,1070,448" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed"/>
 
-        <TextBox x:Name="SearchBox" FontSize="23" Margin="164,128,796,539"/>
-        <TextBlock Name="SearchText" Text="Word to update:" HorizontalAlignment="Left" Margin="44,147,0,549"/>
+        <TextBox x:Name="textBoxImagePathUpdate" FontSize="23" Margin="10,322,796,335" Visibility="Collapsed"/>
+
+        <TextBox x:Name="SearchBox" FontSize="23" Margin="164,128,796,539" Visibility="Collapsed"/>
+        <TextBlock Name="SearchText" Text="Word to update:" HorizontalAlignment="Left" Margin="44,147,0,549" Visibility="Collapsed"/>
 
         <ListBox Name="wordListBox" Margin="566,23,10,23"/>
 
