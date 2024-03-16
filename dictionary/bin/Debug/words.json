@@ -1,44 +1,14 @@
 [
   {
     "Word": "lalea",
-    "Description": "O floare",
-    "Category": "floare",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\lalea.jpg"
-  },
-  {
-    "Word": "h",
-    "Description": "h",
-    "Category": "h",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "lalea",
     "Description": "Plantă erbacee din familia liliaceelor, cu bulb alungit, ascuțit la vârf, cu frunze lanceolate, groase și late, cu tulpina înaltă, care face o singură floare mare, de diverse culori",
     "Category": "floare",
     "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\lalea.jpg"
   },
   {
-    "Word": "u",
-    "Description": "h",
-    "Category": "sentiment",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "fgh",
-    "Description": "fgh",
-    "Category": "sentiment",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "hj",
-    "Description": "fghj",
-    "Category": "ghj",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "asd",
-    "Description": "rty",
-    "Category": "asdf",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
+    "Word": "osuar",
+    "Description": "Loc sau construcție în care sunt depuse osemintele rezultate din deshumări.",
+    "Category": "cladire",
+    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\osuar.jpg"
   }
 ]
