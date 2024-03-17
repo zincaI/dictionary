@@ -70,3 +70,4 @@ C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\TEMA1\dictionary\dictionary\obj\D
 C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\TEMA1\dictionary\dictionary\obj\Debug\dictionary.csproj.CopyComplete
 C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\TEMA1\dictionary\dictionary\obj\Debug\dictionary.exe
 C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\TEMA1\dictionary\dictionary\obj\Debug\dictionary.pdb
+C:\Users\zinca\OneDrive\Desktop\anul2\sem2\MAP\TEMA1\dictionary\dictionary\bin\Debug\dictionary.pdb

@@ -24,9 +24,11 @@ namespace dictionary
 
         public void Start_Click(object sender, RoutedEventArgs e)
         {
-            Close();
-            RoundGame rounds = new RoundGame();
-            rounds.Show();
+            int numberOfRounds = 5; // Numărul de runde dorite
+
+            RoundGame roundGame = new RoundGame(numberOfRounds);
+            roundGame.Show();
+            Close(); // Închide fereastra Entertainment după ce a început jocul
         }
     }
 }

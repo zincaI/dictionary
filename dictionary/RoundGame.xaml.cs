@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,57 +25,58 @@ namespace dictionary
         bool correct/*,guessed=false*/;
         UInt16 score = 0;
         UInt16 rounds = 0;
+        private int roundNumber;
 
 
-        public RoundGame()
-        {
-            InitializeComponent();
+        //public RoundGame()
+        //{
+        //    InitializeComponent();
 
-            // Obține cuvântul aleatoriu
-            Words randomWord = GetRandomWord(wordsList);
-
-
-            // Actualizează conținutul Label-ului cu cuvântul ales aleatoriu
-            RandomWordLabel.Content = "Random Word: " + randomWord.Word;
-
-            string guess = Guess.Text;
+        //    // Obține cuvântul aleatoriu
+        //    Words randomWord = GetRandomWord(wordsList);
 
 
-            // Deschide fereastra de joc de 5 ori
-            for (int i = 0; i < 5; i++)
-            {
-                // Incrementăm numărul de runde
-                rounds++;
+        //    // Actualizează conținutul Label-ului cu cuvântul ales aleatoriu
+        //    //RandomWordLabel.Content = "Random Word: " + randomWord.Word;
 
-                // Afișăm fereastra de joc și așteptăm închiderea ei
-                RoundGame gameWindow = new RoundGame();
+        //    string guess = Guess.Text;
 
-                gameWindow.ShowDialog();
 
-                // Verificăm dacă a fost corect ghicit cuvântul în fereastra de joc
-                if (IsCorrect(guess))
-                {
-                    // Incrementăm scorul
-                    score++;
-                }
+        //    // Deschide fereastra de joc de 5 ori
+        //    for (int i = 0; i < 5; i++)
+        //    {
+        //        // Incrementăm numărul de runde
+        //        rounds++;
 
-                // Actualizăm etichetele pentru scor și numărul de runde
-                ScoreLabel.Content = "Score: " + score;
-                RoundLabel.Content = "Rounds: " + rounds;
-            }
+        //        // Afișăm fereastra de joc și așteptăm închiderea ei
+        //        RoundGame gameWindow = new RoundGame();
 
-            // Afisam un mesaj cu scorul final
-            MessageBox.Show("Final score: " + score);
-        }
+        //        gameWindow.ShowDialog();
 
-        
-        public bool IsCorrect(string guess)
-        {
-            Words randWord = GetRandomWord(wordsList);
-            if(guess==randWord.Word)
-                return true;
-            return false;
-        }
+        //        // Verificăm dacă a fost corect ghicit cuvântul în fereastra de joc
+        //        if (IsCorrect(guess))
+        //        {
+        //            // Incrementăm scorul
+        //            score++;
+        //        }
+
+        //        // Actualizăm etichetele pentru scor și numărul de runde
+        //        ScoreLabel.Content = "Score: " + score;
+        //        RoundLabel.Content = "Rounds: " + rounds;
+        //    }
+
+        //    // Afisam un mesaj cu scorul final
+        //    MessageBox.Show("Final score: " + score);
+        //}
+
+
+        //public bool IsCorrect(string guess)
+        //{
+        //    Words randWord = GetRandomWord(wordsList);
+        //    if(guess==randWord.Word)
+        //        return true;
+        //    return false;
+        //}
 
         private Words GetRandomWord(List<Words> wordsList)
         {
@@ -101,6 +103,89 @@ namespace dictionary
             return random.Next(1, 3);
         }
 
+        private int remainingRounds;
+
+        public RoundGame(int numberOfRounds)
+        {
+            InitializeComponent();
+            remainingRounds = numberOfRounds;
+            int option = GenerateRandomNumber();
+            Words randomWord = GetRandomWord(wordsList);
+            string path;
+            string imagesDirectory = Environment.CurrentDirectory + "\\images\\";
+
+            path = imagesDirectory + "delaut.jpg";
+
+            if (randomWord.ImagePath != path)
+                option = GenerateRandomNumber();
+            else
+            {
+                option = 1;
+            }
+
+            if (option == 1)
+                {
+                    RandomWordLabel.Visibility = Visibility.Visible;
+                    RandomWordLabel.Text =randomWord.Description;
+                }
+                else
+                {
+                    ImageDisplay.Visibility = Visibility.Visible;
+                    ImageDisplay.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(randomWord.ImagePath, UriKind.RelativeOrAbsolute));
+
+                }
+            
+
+        }
+
+        private void NextRound_Click(object sender, RoutedEventArgs e)
+        {
+            remainingRounds--;
+
+            if (remainingRounds == 0)
+            {
+                Next.Visibility = Visibility.Collapsed;
+                Finish.Visibility = Visibility.Visible;
+            }
+
+            RoundNumberLabel.Content = "Round: " + ( 5-remainingRounds);
+            ScoreLabel.Content = "Score: " + score;
+            RandomWordLabel.Visibility = Visibility.Collapsed;
+            ImageDisplay.Visibility= Visibility.Collapsed;
+
+            int option = GenerateRandomNumber();
+            Words randomWord = GetRandomWord(wordsList);
+
+            string path;
+            string imagesDirectory = Environment.CurrentDirectory + "\\images\\";
+
+            path = imagesDirectory + "delaut.jpg";
+
+            if (randomWord.ImagePath != path)
+                option = GenerateRandomNumber();
+            else
+            {
+                option = 1;
+            }
+
+            if (option == 1)
+            {
+                RandomWordLabel.Visibility = Visibility.Visible;
+                RandomWordLabel.Text = randomWord.Description;
+            }
+            else
+            {
+                ImageDisplay.Visibility = Visibility.Visible;
+                ImageDisplay.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(randomWord.ImagePath, UriKind.RelativeOrAbsolute));
+
+            }
+        }
+
+        private void FinishRound_Click(object sender, RoutedEventArgs e)
+        {
+           
+            Close(); 
+        }
 
 
     }
