@@ -8,13 +8,15 @@
         Title="RoundGame" Height="450" Width="800" Background="LightGray">
     <Grid>
 
-        <TextBlock Text="Correct" HorizontalAlignment="Left" Margin="38,318,0,54" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279" Visibility="Collapsed"/>
-        <TextBlock Text="Incorrect" HorizontalAlignment="Left" Margin="121,210,0,59" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279" Visibility="Collapsed"/>
+        <TextBlock Name="Correct" Text="Correct" HorizontalAlignment="Left" Margin="121,230,0,142" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279" Visibility="Collapsed"/>
+        <TextBlock Name="Incorrect" Text="Incorrect" HorizontalAlignment="Left" Margin="121,210,0,10" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279" Visibility="Collapsed"/>
         <Button  Name="Next" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="43,335,0,0" Click="NextRound_Click"/>
         <Button  Name="Finish" Content="Finish" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="43,335,0,0" Visibility="Collapsed" Click="FinishRound_Click"/>
         <Label x:Name="ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="718,0,0,0"/>
         <Label x:Name="RoundNumberLabel" Content="Round: 0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="718,13,0,0" Grid.RowSpan="5"/>
         <TextBox x:Name="Guess" FontSize="23" Margin="43,97,385,248" RenderTransformOrigin="0.496,8.843"/>
+        <Button  Name="Verify" Content="Finished guessing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="43,217,0,0" Click="GuessedButton_Click"/>
+
         <TextBlock Text="Your guess:" HorizontalAlignment="Left" Margin="65,26,0,337" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279"/>
         <TextBlock Name="RandomWordLabel" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="503,62,0,0" Width="272" Height="334" VerticalAlignment="Top" Visibility="Collapsed"/>
 
