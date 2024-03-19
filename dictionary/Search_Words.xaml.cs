@@ -17,14 +17,14 @@ namespace dictionary
         {
             InitializeComponent();
             LoadWordListFromJson();
-            //SearchTextBox.TextChanged += SearchTextBox_TextChanged;
+            SearchTextBox.TextChanged += SearchTextBox_TextChanged;
         }
 
         private void LoadWordListFromJson()
         {
             try
             {
-                wordsList = Words.ReadWordsFromJson(); // Modificare aici
+                wordsList = Words.ReadWordsFromJson();
                 wordList = wordsList.Select(word => word.Word).ToList();
                 SearchBar.ItemsSource = wordList;
             }
@@ -39,10 +39,8 @@ namespace dictionary
         {
             string searchText = SearchTextBox.Text.ToLower();
 
-            // Filtrăm lista de cuvinte
             var filteredWords = wordList.Where(word => word.ToLower().StartsWith(searchText)).ToList();
 
-            // Actualizăm lista afișată în ListBox
             SearchBar.ItemsSource = filteredWords;
         }
 

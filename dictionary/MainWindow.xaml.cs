@@ -27,28 +27,22 @@ namespace dictionary
 
         private void Login_Click(object sender, EventArgs e)
         {
-            // Instantiate SecondForm
+            
             Login login = new Login();
-
-            // Display SecondForm
             login.Show();
         }
 
         private void SearchWords_Click(object sender, EventArgs e)
         {
-            // Instantiate SecondForm
+            
             Search_Words window = new Search_Words();
-
-            // Display SecondForm
             window.Show();
         }
 
         private void Entertainment_Click(object sender, EventArgs e)
         {
-            // Instantiate SecondForm
+            
             Entertainment startGame = new Entertainment();
-
-            // Display SecondForm
             startGame.Show();
         }
     }

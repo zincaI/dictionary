@@ -19,13 +19,12 @@ namespace dictionary
         public ManageWords()
         {
             InitializeComponent();
-            //PopulateWordListBox(); // Adaugă această linie pentru a actualiza lista de cuvinte la încărcarea ferestrei
-            PopulateCategoryListBox(); // Populează lista de categorii la încărcarea ferestrei
+            PopulateCategoryListBox(); 
         }
 
         string imagesDirectory = Environment.CurrentDirectory + "\\images\\";
 
-        // Verifică dacă calea este absolută
+       
         private bool IsAbsolutePath(string path)
         {
             return !string.IsNullOrEmpty(path) && (path[0] == '/' || path[0] == '\\' || path.Contains(":/"));
@@ -36,31 +35,24 @@ namespace dictionary
         {
             try
             {
-                // Read the list of words from the JSON file
                 List<Words> wordsList = Words.ReadWordsFromJson();
 
                 PopulateCategoryList(wordsList);
 
-
-                // Clear the ListBox's Items
                 wordListBox.Items.Clear();
 
-                // Populate the ListBox with words and images
                 foreach (var word in wordsList)
                 {
                     StackPanel wordPanel = new StackPanel();
-
-                    // TextBlock for word details
                     TextBlock wordTextBlock = new TextBlock();
                     wordTextBlock.Text = $"Word: {word.Word}\nCategory: {word.Category}\nDescription: {word.Description}\n";
                     wordPanel.Children.Add(wordTextBlock);
 
-                    // Image
                     System.Windows.Controls.Image image = new System.Windows.Controls.Image();
-                    BitmapImage bitmapImage = new BitmapImage(new Uri(word.ImagePath)); // Assuming 'ImagePath' property holds the path of the image
+                    BitmapImage bitmapImage = new BitmapImage(new Uri(word.ImagePath)); 
                     image.Source = bitmapImage;
-                    image.Width = 100; // Set width as needed
-                    image.Height = 100; // Set height as needed
+                    image.Width = 100; 
+                    image.Height = 100; 
                     wordPanel.Children.Add(image);
 
                     wordListBox.Items.Add(wordPanel);
@@ -90,13 +82,11 @@ namespace dictionary
 
         private void PopulateCategoryListBox()
         {
-            // Clear the items of listBoxCategory
+            
             listBoxCategory.Items.Clear();
 
             PopulateCategoryList(wordsList);
 
-
-            //Add existing categories to listBoxCategory
             foreach (string category in categories)
             {
                 listBoxCategory.Items.Add(category);
@@ -107,7 +97,7 @@ namespace dictionary
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            // Show the text boxes when the button is clicked
+            
             textBoxWord.Visibility = Visibility.Visible;
             textBoxDescription.Visibility = Visibility.Visible;
             listBoxCategory.Visibility = Visibility.Visible;
@@ -120,25 +110,21 @@ namespace dictionary
 
             PopulateCategoryListBox();
 
-
-
-            // Show the "Update" button if it's properly initialized and accessible
-            if (AddButton != null)
+            if (AddButton != null && AbandonAddButton != null)
             {
                 AddButton.Visibility = Visibility.Visible;
                 AbandonAddButton.Visibility = Visibility.Visible;
             }
             else
             {
-                // Handle the case where the UpdateButton is not properly initialized
-                MessageBox.Show("UpdateButton is not properly initialized.");
+                MessageBox.Show("AddButton or AbandonAddButton are not properly initialized.");
             }
         }
 
 
         private void RetrieveVisabilityAdd(object sender, RoutedEventArgs e)
         {
-            // Show the text boxes when the button is clicked
+            
             textBoxWord.Visibility = Visibility.Collapsed;
             textBoxDescription.Visibility = Visibility.Collapsed;
             listBoxCategory.Visibility = Visibility.Collapsed;
@@ -149,7 +135,7 @@ namespace dictionary
             Description.Visibility = Visibility.Collapsed;
             Path.Visibility = Visibility.Collapsed;
 
-            // Show the "Update" button if it's properly initialized and accessible
+            
             if (AddButton != null)
             {
                 AddButton.Visibility = Visibility.Collapsed;
@@ -163,7 +149,6 @@ namespace dictionary
             try
             {
 
-                // Retrieve the content of the text boxes
                 string word = textBoxWord.Text;
                 string description = textBoxDescription.Text;
                 string categoryText = listBoxCategory.SelectedItem?.ToString() ?? textBoxNewCategory.Text;
@@ -176,26 +161,24 @@ namespace dictionary
                     category=categoryText;
                 else category=categoryList;
 
-                // Verificați dacă calea imaginii este relativă sau absolută
+                
                 if (!IsAbsolutePath(imagePath))
                 {
                     if (string.IsNullOrEmpty(imagePath))
                     {
                         imagePath = "delault_image.jpg";
                     }
-                    // Dacă este relativă, adăugați directorul imaginilor în fața
+                    
                     imagePath = imagesDirectory + imagePath;
                     imagePath = imagePath.Replace("\\", "\\\\");
                 }
 
-                // Create an instance of the Words class
+                
                 Words words = new Words();
                 if (!string.IsNullOrEmpty(word) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(category))
                 {
-                    // Call the AddWord method to add the word
+                    
                     words.AddWord(word, description, category, imagePath);
-
-                    // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word added successfully!");
                     RetrieveVisabilityAdd(sender, e);
                     PopulateWordListBox();
@@ -210,12 +193,11 @@ namespace dictionary
                     MessageBox.Show("Invalid word!");
                 }
 
-                // Optionally, you can clear the text boxes after adding the word
+               
                 textBoxWord.Text = "";
                 textBoxDescription.Text = "";
                 textBoxImagePath.Text = "";
                 textBoxNewCategory.Text = "";
-                //listBoxCategory.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -226,10 +208,8 @@ namespace dictionary
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            // Show the text boxes when the button is clicked
+            
             textBoxDeletedWord.Visibility = Visibility.Visible;
-
-            // Show the "Update" button if it's properly initialized and accessible
             if (DeleteButton != null)
             {
                 DeleteButton.Visibility = Visibility.Visible;
@@ -237,17 +217,14 @@ namespace dictionary
             }
             else
             {
-                // Handle the case where the UpdateButton is not properly initialized
                 MessageBox.Show("UpdateButton is not properly initialized.");
             }
         }
 
         private void RetrieveVisabilityDelete(object sender, RoutedEventArgs e)
         {
-            // Show the text boxes when the button is clicked
+            
             textBoxDeletedWord.Visibility = Visibility.Collapsed;
-
-            // Show the "Update" button if it's properly initialized and accessible
             if (DeleteButton != null)
             {
                 DeleteButton.Visibility = Visibility.Collapsed;
@@ -255,7 +232,6 @@ namespace dictionary
             }
             else
             {
-                // Handle the case where the UpdateButton is not properly initialized
                 MessageBox.Show("DeleteButton is not properly initialized.");
             }
         }
@@ -265,24 +241,19 @@ namespace dictionary
         {
             try
             {
-                // Retrieve the word to be deleted from the textbox
                 string deletedWord = textBoxDeletedWord.Text;
 
-                // Read the list of words from the JSON file
                 List<Words> wordsList = Words.ReadWordsFromJson();
 
-                // Find the word to delete in the wordsList
+               
                 Words wordToDelete = wordsList.FirstOrDefault(w => w.Word.Equals(deletedWord, StringComparison.OrdinalIgnoreCase));
 
                 if (wordToDelete != null)
                 {
-                    // Remove the word from the wordsList
+                    
                     wordsList.Remove(wordToDelete);
-
-                    // Write the updated list of words back to the JSON file
                     Words.WriteWordsToJson(wordsList);
 
-                    // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word deleted successfully!");
                     RetrieveVisabilityDelete(sender, e);
                     PopulateWordListBox();
@@ -293,7 +264,6 @@ namespace dictionary
                     MessageBox.Show("Word does not exist in the list.");
                 }
 
-                // Optionally, you can clear the textbox after deleting the word
                 textBoxDeletedWord.Text = "";
             }
             catch (Exception ex)
@@ -304,7 +274,7 @@ namespace dictionary
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            // Show the text boxes when the button is clicked
+            
             SearchBox.Visibility = Visibility.Visible;
             SearchText.Visibility = Visibility.Visible;
             textBoxWordUpdate.Visibility = Visibility.Visible;
@@ -327,7 +297,6 @@ namespace dictionary
             }
             else
             {
-                // Handle the case where the UpdateButton or AbandonUpdateButton is not properly initialized
                 MessageBox.Show("UpdateButton or AbandonUpdateButton is not properly initialized.");
             }
         }
@@ -336,23 +305,20 @@ namespace dictionary
         {
             try
             {
-                // Retrieve the content of the text boxes
                 string updatedWord = textBoxWordUpdate.Text;
                 string updatedDescription = textBoxDescriptionUpdate.Text;
                 string updateCategoryText = listBoxCategory.SelectedItem?.ToString() ?? textBoxCategoryUpdate.Text;
                 string updateCategoryList = listBoxCategory.SelectedItem?.ToString();
                 string updatedImagePath = textBoxImagePathUpdate.Text;
                 string initialWord = SearchBox.Text;
-               // string updatedCategory;
+               
 
                 List<Words> wordsList = Words.ReadWordsFromJson();
 
-                // Find the word to update in the wordsList
                 Words selectedWord = wordsList.FirstOrDefault(w => w.Word.Equals(initialWord, StringComparison.OrdinalIgnoreCase));
 
                 if (selectedWord != null)
                 {
-                    // Update the properties of the selected word
                     if (updatedDescription != "")
                         selectedWord.Description = updatedDescription;
                     if (updateCategoryText != "")
@@ -365,7 +331,6 @@ namespace dictionary
                         {
                             if (updatedImagePath == "")
                                 updatedImagePath = "delault_image.jpg";
-                            // Dacă este relativă, adăugați directorul imaginilor în fața
                             updatedImagePath = imagesDirectory + updatedImagePath;
                             updatedImagePath = updatedImagePath.Replace("\\", "\\\\");
                             selectedWord.ImagePath = updatedImagePath;
@@ -377,11 +342,9 @@ namespace dictionary
                     if (updatedWord != "")
                         selectedWord.Word = updatedWord;
 
-                    // Write the updated list of words back to the JSON file
 
                     Words.WriteWordsToJson(wordsList);
 
-                    // Optionally, you can show a message box to indicate success
                     MessageBox.Show("Word updated successfully!");
                     RetrieveVisabilityUpdate(sender, e);
                     PopulateWordListBox();
@@ -397,7 +360,6 @@ namespace dictionary
                     MessageBox.Show("Word not found for update.");
                 }
 
-                // Clear the text boxes after updating the word
                 textBoxWordUpdate.Text = "";
                 textBoxDescriptionUpdate.Text = "";
                 textBoxCategoryUpdate.Text = "";
@@ -412,7 +374,7 @@ namespace dictionary
 
         private void RetrieveVisabilityUpdate(object sender, RoutedEventArgs e)
         {
-            // Show the text boxes when the button is clicked
+            
             textBoxWordUpdate.Visibility = Visibility.Collapsed;
             textBoxDescriptionUpdate.Visibility = Visibility.Collapsed;
             textBoxCategoryUpdate.Visibility = Visibility.Collapsed;
@@ -426,7 +388,6 @@ namespace dictionary
             listBoxCategory.Visibility = Visibility.Collapsed;
 
 
-            // Show the "Update" button if it's properly initialized and accessible
             if (UpdateButton != null)
             {
                 UpdateButton.Visibility = Visibility.Collapsed;

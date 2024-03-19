@@ -1,14 +1,12 @@
 ﻿<Window x:Class="dictionary.RoundGame"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dictionary"
-        mc:Ignorable="d"
-        Title="RoundGame" Height="450" Width="800" Background="LightGray">
+        Title="Round Game" Height="450" Width="800" Background="LightGray">
+
     <Grid>
 
-        <TextBlock Name="Correct" Text="Correct" HorizontalAlignment="Left" Margin="121,230,0,142" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279" Visibility="Collapsed"/>
+        <TextBlock Name="Correct" Text="Correct" HorizontalAlignment="Left" Margin="121,230,0,99" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279" Visibility="Collapsed"/>
         <TextBlock Name="Incorrect" Text="Incorrect" HorizontalAlignment="Left" Margin="121,210,0,10" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold" Width="279" Visibility="Collapsed"/>
         <Button  Name="Next" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="43,335,0,0" Click="NextRound_Click"/>
         <Button  Name="Finish" Content="Finish" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="43,335,0,0" Visibility="Collapsed" Click="FinishRound_Click"/>

@@ -82,9 +82,6 @@
     <Compile Include="Entertainment.xaml.cs">
       <DependentUpon>Entertainment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FinalScoreGame.xaml.cs">
-      <DependentUpon>FinalScoreGame.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="RoundGame.xaml.cs">
       <DependentUpon>RoundGame.xaml</DependentUpon>
@@ -98,10 +95,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Entertainment.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FinalScoreGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -10,10 +10,7 @@ namespace dictionary
     //enterAdmin_Click
     public partial class Login : Window
     {
-        //private void CloseWindow()
-        //{
-        //    this.Close();
-        //}
+        
         private void EnterAdmin_Click(object sender, RoutedEventArgs e)
         {
             try

@@ -12,7 +12,7 @@ namespace dictionary
         private int remainingRounds;
 
         string path = Environment.CurrentDirectory + "\\images\\delault_image.jpg";
-        //path = path.Replace("\\", "\\\\");
+       
 
         Words randomWord ;
 
@@ -47,9 +47,6 @@ namespace dictionary
 
             randomWord = GetRandomWord(wordsList);
 
-            MessageBox.Show(path);
-            MessageBox.Show(randomWord.ImagePath);
-
             int option;
             if (randomWord.ImagePath != path)
                 option = GenerateRandomNumber();
@@ -72,10 +69,9 @@ namespace dictionary
         }
         private int GenerateRandomNumber()
         {
-            // Creează o instanță a clasei Random
+            
             Random random = new Random();
 
-            // Generează un număr întreg aleatoriu între 1 și 2 (inclusiv 1, fără 3)
             return random.Next(1, 3);
         }
 
