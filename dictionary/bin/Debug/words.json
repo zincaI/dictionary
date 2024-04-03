@@ -1,14 +1,50 @@
 [
   {
-    "Word": "th",
-    "Description": "e4r5t6",
-    "Category": "wt",
-    "ImagePath": "delault_image.jpg"
+    "Word": "lalea",
+    "Description": "Plantă erbacee din familia liliaceelor, cu bulb alungit, ascuțit la vârf, cu frunze lanceolate, groase și late, cu tulpina înaltă, care face o singură floare mare, de diverse culori.",
+    "Category": "planta",
+    "ImagePath": "lalea.jpg"
   },
   {
-    "Word": "lalea",
-    "Description": "asdfgh",
-    "Category": "dfghyuj",
-    "ImagePath": "lalea.jpg"
+    "Word": "actor",
+    "Description": "Artist(ă) care interpretează roluri în piese de teatru, în filme etc.",
+    "Category": "meserie",
+    "ImagePath": "actor.jpg"
+  },
+  {
+    "Word": "cacealma",
+    "Description": "Inducere în eroare a adversarului, dându-i impresia că ai cărți mai bune decât ale lui.",
+    "Category": "tehnica",
+    "ImagePath": "cacealma.jpg"
+  },
+  {
+    "Word": "carte",
+    "Description": "Scriere cu un anumit subiect, tipărită și legată sau broșată în volum.",
+    "Category": "obiect",
+    "ImagePath": "carte.jpg"
+  },
+  {
+    "Word": "cavaler",
+    "Description": "Titlu dat unei persoane dintr-un ordin cavaleresc, laic sau religios.",
+    "Category": "titlu",
+    "ImagePath": "cavaler.png"
+  },
+  {
+    "Word": "osuar",
+    "Description": "Loc sau construcție în care sunt depuse osemintele rezultate din deshumări.",
+    "Category": "planta",
+    "ImagePath": "osuar.jpg"
+  },
+  {
+    "Word": "păpușă",
+    "Description": "Jucărie care reprezintă de obicei un copil, făcută din carton, din celuloid, din lemn etc.",
+    "Category": "obiect",
+    "ImagePath": "papusa.jpg"
+  },
+  {
+    "Word": "targ",
+    "Description": "Spațiu mai întins și special amenajat într-un oraș sau la marginea unui oraș, unde se vând și se cumpără (zilnic sau la anumite date) vite, cereale, alimente, zarzavaturi etc.",
+    "Category": "cumparaturi",
+    "ImagePath": "targ.jpg"
   }
 ]
