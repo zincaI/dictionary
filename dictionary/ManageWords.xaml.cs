@@ -101,18 +101,19 @@ namespace dictionary
 
         private void PopulateCategoryListBox()
         {
-            
             listBoxCategory.Items.Clear();
 
             PopulateCategoryList(wordsList);
 
             foreach (string category in categories)
             {
-                listBoxCategory.Items.Add(category);
+                if (!listBoxCategory.Items.Contains(category))
+                {
+                    listBoxCategory.Items.Add(category);
+                }
             }
-
-
         }
+
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
