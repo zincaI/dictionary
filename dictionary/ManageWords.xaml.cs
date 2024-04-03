@@ -23,11 +23,26 @@ namespace dictionary
         }
 
         string imagesDirectory = Environment.CurrentDirectory + "\\images\\";
+        
+
 
        
         private bool IsAbsolutePath(string path)
         {
             return !string.IsNullOrEmpty(path) && (path[0] == '/' || path[0] == '\\' || path.Contains(":/"));
+        }
+
+        public string BuildImagePath(string path)
+        {
+            return imagesDirectory + path;
+        }
+
+        public void BuildImagePaths(List<Words> list)
+        {
+            for(int i=0;i< list.Count;i++)
+            {
+                BuildImagePath(list[i].ImagePath);
+            }
         }
 
 
@@ -36,6 +51,8 @@ namespace dictionary
             try
             {
                 List<Words> wordsList = Words.ReadWordsFromJson();
+
+                BuildImagePaths(wordsList);
 
                 PopulateCategoryList(wordsList);
 
@@ -47,9 +64,11 @@ namespace dictionary
                     TextBlock wordTextBlock = new TextBlock();
                     wordTextBlock.Text = $"Word: {word.Word}\nCategory: {word.Category}\nDescription: {word.Description}\n";
                     wordPanel.Children.Add(wordTextBlock);
+                    string imageCompletePath = imagesDirectory + word.ImagePath;
+                    imageCompletePath = imageCompletePath.Replace("\\", "\\\\");
 
                     System.Windows.Controls.Image image = new System.Windows.Controls.Image();
-                    BitmapImage bitmapImage = new BitmapImage(new Uri(word.ImagePath)); 
+                    BitmapImage bitmapImage = new BitmapImage(new Uri(imageCompletePath)); 
                     image.Source = bitmapImage;
                     image.Width = 100; 
                     image.Height = 100; 
@@ -169,8 +188,8 @@ namespace dictionary
                         imagePath = "delault_image.jpg";
                     }
                     
-                    imagePath = imagesDirectory + imagePath;
-                    imagePath = imagePath.Replace("\\", "\\\\");
+                    //imagePath = imagesDirectory + imagePath;
+                    //imagePath = imagePath.Replace("\\", "\\\\");
                 }
 
                 
@@ -331,7 +350,7 @@ namespace dictionary
                         {
                             if (updatedImagePath == "")
                                 updatedImagePath = "delault_image.jpg";
-                            updatedImagePath = imagesDirectory + updatedImagePath;
+                            //updatedImagePath = imagesDirectory + updatedImagePath;
                             updatedImagePath = updatedImagePath.Replace("\\", "\\\\");
                             selectedWord.ImagePath = updatedImagePath;
 

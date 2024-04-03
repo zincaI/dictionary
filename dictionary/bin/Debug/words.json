@@ -1,68 +1,14 @@
 [
   {
+    "Word": "th",
+    "Description": "e4r5t6",
+    "Category": "wt",
+    "ImagePath": "delault_image.jpg"
+  },
+  {
     "Word": "lalea",
-    "Description": "Plantă erbacee din familia liliaceelor, cu bulb alungit, ascuțit la vârf, cu frunze lanceolate, groase și late, cu tulpina înaltă, care face o singură floare mare, de diverse culori",
-    "Category": "floare",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\lalea.jpg"
-  },
-  {
-    "Word": "osuar",
-    "Description": "Loc sau construcție în care sunt depuse osemintele rezultate din deshumări.",
-    "Category": "cladire",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\osuar.jpg"
-  },
-  {
-    "Word": "minciuna",
-    "Description": "Afirmație prin care se denaturează în mod deliberat adevărul.",
-    "Category": "gest",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "papusa",
-    "Description": "jucărie care reprezintă de obicei un copil, făcută din carton, din celuloid, din lemn etc.",
-    "Category": "obiect",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\papusa.jpg"
-  },
-  {
-    "Word": "carte",
-    "Description": "Scriere cu un anumit subiect, tipărită și legată sau broșată în volum.",
-    "Category": "obiect",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\carte.jpg"
-  },
-  {
-    "Word": "vis",
-    "Description": "Stare a celui cuprins de gânduri și de amintiri plăcute.",
-    "Category": "stare",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "actor",
-    "Description": "Artist(ă) care interpretează roluri în piese de teatru, în filme etc.",
-    "Category": "persoana",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\actor.jpg"
-  },
-  {
-    "Word": "livid",
-    "Description": "(Despre fața omului) Vânăt, învinețit (de emoție, de frig, de oboseală)",
-    "Category": "stare",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\delault_image.jpg"
-  },
-  {
-    "Word": "targ",
-    "Description": "Spațiu mai întins și special amenajat într-un oraș sau la marginea unui oraș, unde se vând și se cumpără (zilnic sau la anumite date) vite, cereale, alimente, zarzavaturi etc.",
-    "Category": "loc",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\targ.jpg"
-  },
-  {
-    "Word": "cacealma",
-    "Description": "(La jocul de cărți) Inducere în eroare a adversarului, dându-i impresia că ai cărți mai bune decât ale lui",
-    "Category": "tehnica",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\cacealma.jpg"
-  },
-  {
-    "Word": "cavaler",
-    "Description": "Titlu onorific conferit, în unele țări, posesorului anumitor decorații importante.",
-    "Category": "persoana",
-    "ImagePath": "C:\\\\Users\\\\zinca\\\\OneDrive\\\\Desktop\\\\anul2\\\\sem2\\\\MAP\\\\TEMA1\\\\dictionary\\\\dictionary\\\\bin\\\\Debug\\\\images\\\\cavaler.png"
+    "Description": "asdfgh",
+    "Category": "dfghyuj",
+    "ImagePath": "lalea.jpg"
   }
 ]

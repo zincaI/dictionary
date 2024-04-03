@@ -18,24 +18,20 @@ namespace dictionary
                 string name = textBoxUsername.Text;
                 string password = passwordBoxPassword.Password;
 
-                // Call the FindAdmin method to check if the credentials are valid
+                
                 bool isValid = People.FindAdmin(name, password);
 
                 if (isValid)
                 {
-                    Close();
-                    // Instantiate SecondForm
                     ManageWords words = new ManageWords();
                     words.PopulateWordListBox();
-
-                    // Display SecondForm
+                    Close();
                     words.Show();
 
                 }
                 else
                 {
                     MessageBox.Show("Invalid username or password!");
-                    // Handle invalid login attempt
                 }
             }
             catch (Exception ex)

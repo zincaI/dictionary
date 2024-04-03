@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace dictionary
 {
-    internal class Words
+    public class Words
     {
         public string Word { get; set; }
         public string Description { get; set; }
@@ -82,10 +82,10 @@ namespace dictionary
 
         public static List<string> FindWordsStartingWith(List<Words> wordsList, string startingLetters)
         {
-            // Convert startingLetters to lowercase for case-insensitive search
+            
             startingLetters = startingLetters.ToLower();
 
-            // Find words that start with the given letters
+            
             List<string> foundWords = wordsList
                 .Where(word => word.Word.ToLower().StartsWith(startingLetters))
                 .Select(word => word.Word)
