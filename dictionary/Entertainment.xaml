@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dictionary"
         mc:Ignorable="d"
-        Title="Entertainment" Height="450" Width="800" Background="LightGray">
+        Title="Entertainment" Height="450" Width="800" Background="LightGray"  ResizeMode="NoResize">
     <Grid>
         <TextBlock Text="The guessing game" HorizontalAlignment="Left" Margin="211,55,0,277" FontSize="40" FontFamily="Segoe UI" Foreground="Blue" FontWeight="Bold"/>
         <TextBlock x:Name="Word" HorizontalAlignment="Left" Margin="8,0,0,169" Height="71" VerticalAlignment="Bottom" Width="767"><Run Text="The rules are simple: You will receive a description or an image and you have to guess the word. There will be five round, each adding up to one "/><LineBreak/><Run Text="&#x9;&#x9;point. No matter what you answer you will be able to see the correct answer as it is in the dictionary."/><LineBreak/><Run Text=" &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Best of luck and have fun! "/></TextBlock>

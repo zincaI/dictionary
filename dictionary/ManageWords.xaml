@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dictionary"
         mc:Ignorable="d"
-        Title="Manage Words" Height="747" Width="1322" Background="LightGray">
+        Title="Manage Words" Height="747" Width="1322" Background="LightGray"  ResizeMode="NoResize">
     <Grid>
 
         <Button  Name="add" Content="Add word" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Height="40" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="37,57,0,0" Click="Add_Click"/>

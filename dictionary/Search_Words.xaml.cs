@@ -12,12 +12,16 @@ namespace dictionary
     {
         private List<string> wordList;
         private List<Words> wordsList;
+        string currentPath = Environment.CurrentDirectory + "\\images\\";
+
 
         public Search_Words()
         {
             InitializeComponent();
             LoadWordListFromJson();
             SearchTextBox.TextChanged += SearchTextBox_TextChanged;
+            currentPath = currentPath.Replace("\\", "\\\\");
+
         }
 
         private void LoadWordListFromJson()
@@ -81,7 +85,9 @@ namespace dictionary
                     SearchedWord.Text = $"Word: {word.Word}\nCategory: {word.Category}\nDescription: {word.Description}\n";
                     if (!string.IsNullOrEmpty(word.ImagePath))
                     {
-                        ImageDisplay.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(word.ImagePath, UriKind.RelativeOrAbsolute));
+                        string actualPath = currentPath + word.ImagePath;
+
+                        ImageDisplay.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(actualPath, UriKind.RelativeOrAbsolute));
                     }
                     else
                     {

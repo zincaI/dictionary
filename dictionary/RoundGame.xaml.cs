@@ -12,7 +12,8 @@ namespace dictionary
         private int remainingRounds;
 
         string path = Environment.CurrentDirectory + "\\images\\delault_image.jpg";
-       
+        string currentPath = Environment.CurrentDirectory + "\\images\\";
+
 
         Words randomWord ;
 
@@ -28,6 +29,8 @@ namespace dictionary
         {
             if(remainingRounds==5)
             path = path.Replace("\\", "\\\\");
+            currentPath = currentPath.Replace("\\", "\\\\");
+
 
             RandomWordLabel.Visibility = Visibility.Collapsed;
             ImageDisplay.Visibility = Visibility.Collapsed;
@@ -62,8 +65,9 @@ namespace dictionary
             }
             else
             {
+                string actualPath = currentPath + randomWord.ImagePath;
                 ImageDisplay.Visibility = Visibility.Visible;
-                ImageDisplay.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(randomWord.ImagePath, UriKind.RelativeOrAbsolute));
+                ImageDisplay.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(actualPath, UriKind.RelativeOrAbsolute));
 
             }
         }

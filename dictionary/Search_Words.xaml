@@ -1,8 +1,8 @@
 ﻿<Window x:Class="dictionary.Search_Words"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Search_Words" Height="450" Width="800" Background="LightGray">
-    
+        Title="Search_Words" Height="450" Width="900" Background="LightGray"  ResizeMode="NoResize">
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -12,10 +12,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Introduce word:" Grid.Row="0" HorizontalAlignment="Left" Margin="10"/>
-        <TextBox x:Name="SearchTextBox" Margin="109,9,442,9" TextChanged="SearchTextBox_TextChanged"/>
-        <ListBox x:Name="SearchBar" Margin="10,30,396,255" Grid.Row="4"/>
+        <TextBox x:Name="SearchTextBox" Margin="109,9,568,9" TextChanged="SearchTextBox_TextChanged"/>
+        <ListBox x:Name="SearchBar" Margin="10,30,568,255" Grid.Row="4"/>
         <TextBlock Name="SearchedWord" HorizontalAlignment="Left" Margin="446,9,0,0" Width="334" Height="95" Grid.RowSpan="5" VerticalAlignment="Top" TextWrapping="Wrap"/>
-        <Image x:Name="ImageDisplay" Grid.Row="4" HorizontalAlignment="Left" Margin="460,98,0,95" Width="270"/>
+        <Image x:Name="ImageDisplay" Grid.Row="4" HorizontalAlignment="Left" Margin="526,87,0,88" Width="185"/>
         <Button  Name="Search" Content="SearchWord" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="33" Background="Blue" Foreground="LightGray" BorderBrush="#2196F3" BorderThickness="1" FontWeight="Bold" FontSize="16" Margin="40,306,0,0" Grid.Row="4" Click="SearchWord_Click"/>
     </Grid>
 </Window>
